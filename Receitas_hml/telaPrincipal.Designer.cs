@@ -55,7 +55,7 @@
 			panel1.Controls.Add(textBox1);
 			panel1.Location = new Point(21, 12);
 			panel1.Name = "panel1";
-			panel1.Size = new Size(1015, 55);
+			panel1.Size = new Size(1015, 42);
 			panel1.TabIndex = 1;
 			// 
 			// btnBuscarReceita
@@ -74,7 +74,7 @@
 			// groupBox1
 			// 
 			groupBox1.Controls.Add(dataGridView1);
-			groupBox1.Location = new Point(21, 90);
+			groupBox1.Location = new Point(21, 60);
 			groupBox1.Name = "groupBox1";
 			groupBox1.Size = new Size(1015, 462);
 			groupBox1.TabIndex = 2;
