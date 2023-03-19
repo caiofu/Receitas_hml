@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Receitas_hml
 {
-	public partial class detalhesReceita : Form
+	public partial class detalhesReceita : BaseForm
 	{
 		public detalhesReceita()
 		{
