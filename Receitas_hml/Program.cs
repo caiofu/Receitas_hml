@@ -11,13 +11,9 @@ namespace Receitas_hml
 			//CRIANDO A LISTA PARA LIDAR COM AS RECEIRAS
 			List<Receita> ListaDeReceitas= new List<Receita>();
 
-			//CRIA O ARQUIVO JSON CASO ELE NÃO EXISTA
-			if(File.Exists(Arquivo.caminhoArquivo) == false)
-			{
-				Arquivo.CriaArquivo(ListaDeReceitas);
-			}
+			
 
-			// To customize application configuration such as set high DPI settings or default font,
+		// To customize application configuration such as set high DPI settings or default font,
 			// see https://aka.ms/applicationconfiguration.
 			ApplicationConfiguration.Initialize();
 			Application.Run(new telaPrincipal());

@@ -16,8 +16,13 @@ namespace Receitas_hml
 		//METODOS
 		public static void CriaArquivo(List<Receita> ListaDeReceitas)
 		{
-			string json = JsonConvert.SerializeObject(ListaDeReceitas, Formatting.Indented); //Formatting.Indented para ficar organizado
-			File.WriteAllText(caminhoArquivo, json);
+			//CRIA O ARQUIVO JSON CASO ELE NÃO EXISTA
+			if (File.Exists(caminhoArquivo) == false)
+			{
+				string json = JsonConvert.SerializeObject(ListaDeReceitas, Formatting.Indented); //Formatting.Indented para ficar organizado
+				File.WriteAllText(caminhoArquivo, json);
+			}
+			
 		}
 
 		public static void RemoveContato(int idContato)
