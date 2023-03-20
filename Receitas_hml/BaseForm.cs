@@ -19,7 +19,7 @@ namespace Receitas_hml
 
         private void FechamentoFormularioPadrao(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Deseja realmente sair?", "Verificação", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+            if (MessageBox.Show("Deseja realmente sair?", "Verificação", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
             {
                 e.Cancel = true;
             }
