@@ -9,18 +9,23 @@ using System.Threading.Tasks;
 
 namespace Receitas_hml
 {
-	internal class Arquivo
+	public static class Arquivo
 	{
 		public static string caminhoArquivo = "bdReceitas.json";
 
 		//METODOS
 		public static void CriaArquivo(List<Receita> ListaDeReceitas)
 		{
-			string json = JsonConvert.SerializeObject(ListaDeReceitas, Formatting.Indented); //Formatting.Indented para ficar organizado
-			File.WriteAllText(caminhoArquivo, json);
+			//CRIA O ARQUIVO JSON CASO ELE NÃO EXISTA
+			if (File.Exists(caminhoArquivo) == false)
+			{
+				string json = JsonConvert.SerializeObject(ListaDeReceitas, Formatting.Indented); //Formatting.Indented para ficar organizado
+				File.WriteAllText(caminhoArquivo, json);
+			}
+			
 		}
 
-		public static void RemoveContato(int idContato)
+		public static void RemoveReceita()
 		{
 			dynamic objJson = JsonConvert.DeserializeObject(File.ReadAllText(caminhoArquivo));
 			//Remove o contato
