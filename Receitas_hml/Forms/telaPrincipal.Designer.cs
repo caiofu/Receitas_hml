@@ -35,7 +35,7 @@
 			btnPesquisarReceita = new Button();
 			btnAdicionarReceita = new Button();
 			gpBoxReceitas = new GroupBox();
-			flowLayoutPanel1 = new FlowLayoutPanel();
+			flowLayoutPanelReceitas = new FlowLayoutPanel();
 			gpBoxMenu.SuspendLayout();
 			panel1.SuspendLayout();
 			gpBoxReceitas.SuspendLayout();
@@ -100,7 +100,7 @@
 			// 
 			// gpBoxReceitas
 			// 
-			gpBoxReceitas.Controls.Add(flowLayoutPanel1);
+			gpBoxReceitas.Controls.Add(flowLayoutPanelReceitas);
 			gpBoxReceitas.Location = new Point(12, 84);
 			gpBoxReceitas.Name = "gpBoxReceitas";
 			gpBoxReceitas.Size = new Size(755, 398);
@@ -108,12 +108,12 @@
 			gpBoxReceitas.TabStop = false;
 			gpBoxReceitas.Text = "RECEITAS";
 			// 
-			// flowLayoutPanel1
+			// flowLayoutPanelReceitas
 			// 
-			flowLayoutPanel1.Location = new Point(8, 19);
-			flowLayoutPanel1.Name = "flowLayoutPanel1";
-			flowLayoutPanel1.Size = new Size(742, 373);
-			flowLayoutPanel1.TabIndex = 0;
+			flowLayoutPanelReceitas.Location = new Point(8, 19);
+			flowLayoutPanelReceitas.Name = "flowLayoutPanelReceitas";
+			flowLayoutPanelReceitas.Size = new Size(742, 373);
+			flowLayoutPanelReceitas.TabIndex = 0;
 			// 
 			// telaPrincipal
 			// 
@@ -140,6 +140,6 @@
 		private ComboBox cboxFiltros;
 		private TextBox txBoxPesquisaReceita;
 		private GroupBox gpBoxReceitas;
-		private FlowLayoutPanel flowLayoutPanel1;
+		private FlowLayoutPanel flowLayoutPanelReceitas;
 	}
 }
