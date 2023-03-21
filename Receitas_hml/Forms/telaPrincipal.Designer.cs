@@ -30,9 +30,9 @@
 		{
 			gpBoxMenu = new GroupBox();
 			panel1 = new Panel();
-			comboBox1 = new ComboBox();
-			textBox1 = new TextBox();
-			button2 = new Button();
+			cboxFiltros = new ComboBox();
+			txBoxPesquisaReceita = new TextBox();
+			btnPesquisarReceita = new Button();
 			btnAdicionarReceita = new Button();
 			gpBoxReceitas = new GroupBox();
 			flowLayoutPanel1 = new FlowLayoutPanel();
@@ -54,39 +54,39 @@
 			// 
 			// panel1
 			// 
-			panel1.Controls.Add(comboBox1);
-			panel1.Controls.Add(textBox1);
-			panel1.Controls.Add(button2);
+			panel1.Controls.Add(cboxFiltros);
+			panel1.Controls.Add(txBoxPesquisaReceita);
+			panel1.Controls.Add(btnPesquisarReceita);
 			panel1.Location = new Point(137, 15);
 			panel1.Name = "panel1";
 			panel1.Size = new Size(612, 41);
 			panel1.TabIndex = 3;
 			// 
-			// comboBox1
+			// cboxFiltros
 			// 
-			comboBox1.AutoCompleteCustomSource.AddRange(new string[] { "TODOS", "TÍTULO", "INGREDIENTES", "DIFICULDADE" });
-			comboBox1.FormattingEnabled = true;
-			comboBox1.Items.AddRange(new object[] { "TODOS", "TITULO", "INGREDIENTE", "DIFICULDADE" });
-			comboBox1.Location = new Point(436, 9);
-			comboBox1.Name = "comboBox1";
-			comboBox1.Size = new Size(163, 23);
-			comboBox1.TabIndex = 3;
+			cboxFiltros.AutoCompleteCustomSource.AddRange(new string[] { "TODOS", "TÍTULO", "INGREDIENTES", "DIFICULDADE" });
+			cboxFiltros.FormattingEnabled = true;
+			cboxFiltros.Items.AddRange(new object[] { "TODOS", "TITULO", "INGREDIENTE", "DIFICULDADE" });
+			cboxFiltros.Location = new Point(436, 9);
+			cboxFiltros.Name = "cboxFiltros";
+			cboxFiltros.Size = new Size(163, 23);
+			cboxFiltros.TabIndex = 3;
 			// 
-			// textBox1
+			// txBoxPesquisaReceita
 			// 
-			textBox1.Location = new Point(132, 9);
-			textBox1.Name = "textBox1";
-			textBox1.Size = new Size(298, 23);
-			textBox1.TabIndex = 2;
+			txBoxPesquisaReceita.Location = new Point(132, 9);
+			txBoxPesquisaReceita.Name = "txBoxPesquisaReceita";
+			txBoxPesquisaReceita.Size = new Size(298, 23);
+			txBoxPesquisaReceita.TabIndex = 2;
 			// 
-			// button2
+			// btnPesquisarReceita
 			// 
-			button2.Location = new Point(12, 7);
-			button2.Name = "button2";
-			button2.Size = new Size(115, 28);
-			button2.TabIndex = 1;
-			button2.Text = "Pesquisar";
-			button2.UseVisualStyleBackColor = true;
+			btnPesquisarReceita.Location = new Point(12, 7);
+			btnPesquisarReceita.Name = "btnPesquisarReceita";
+			btnPesquisarReceita.Size = new Size(115, 28);
+			btnPesquisarReceita.TabIndex = 1;
+			btnPesquisarReceita.Text = "Pesquisar";
+			btnPesquisarReceita.UseVisualStyleBackColor = true;
 			// 
 			// btnAdicionarReceita
 			// 
@@ -134,11 +134,11 @@
 		#endregion
 
 		private GroupBox gpBoxMenu;
-		private Button button2;
+		private Button btnPesquisarReceita;
 		private Button btnAdicionarReceita;
 		private Panel panel1;
-		private ComboBox comboBox1;
-		private TextBox textBox1;
+		private ComboBox cboxFiltros;
+		private TextBox txBoxPesquisaReceita;
 		private GroupBox gpBoxReceitas;
 		private FlowLayoutPanel flowLayoutPanel1;
 	}
