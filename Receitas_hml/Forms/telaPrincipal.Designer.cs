@@ -126,7 +126,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(778, 487);
+            this.ClientSize = new System.Drawing.Size(781, 487);
             this.Controls.Add(this.gpBoxReceitas);
             this.Controls.Add(this.gpBoxMenu);
             this.Name = "telaPrincipal";

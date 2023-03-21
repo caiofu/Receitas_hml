@@ -16,8 +16,8 @@ namespace Receitas_hml.Classes
         {
             InitializeComponent();
 
-            lbNomeReceita.Text = receitaAtual.nome;
-
+            lbNomeReceita.Text = receitaAtual.nomeReceita;
+            lbNivelDificuldade.Text = receitaAtual.dificuldade;
         }        
         
     }
