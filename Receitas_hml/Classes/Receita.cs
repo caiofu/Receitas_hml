@@ -8,12 +8,12 @@ namespace Receitas_hml
 {
 	internal class Receita
 	{
-		String nomeReceita { get; set; }
-		String imagem { get; set; } 
-		List<String> ingredientes = new List<String>();
-		bool favorito = false; //padrão
-		String dificuldade { get; set; }
-		List<String> modoPreparo = new List<String>();
+		public String nomeReceita { get; set; }
+		public String imagem { get; set; } 
+		public List<String> ingredientes = new List<String>();
+		public bool favorito = false; //padrão
+		public String dificuldade { get; set; }
+		public List<String> modoPreparo = new List<String>();
 		
 
 		//CONSTRUTOR
