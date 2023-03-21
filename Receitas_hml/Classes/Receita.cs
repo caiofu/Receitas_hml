@@ -17,7 +17,7 @@ namespace Receitas_hml
 		
 
 		//CONSTRUTOR
-		public Receita(String nomeReceita, String imagem, List<String> ingredientes, bool favorito, string dificuldade, List<String> modoPreparo)
+		public Receita(String nomeReceita, String imagem, List<String> ingredientes, bool favorito, string dificuldade,List<String> modoPreparo)
         {
 			this.nomeReceita = nomeReceita;
 			this.imagem = imagem;
