@@ -28,116 +28,126 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			textBox1 = new TextBox();
-			panel1 = new Panel();
-			btnBuscarReceita = new Button();
-			groupBox1 = new GroupBox();
-			dataGridView1 = new DataGridView();
-			nomeReceita = new DataGridViewTextBoxColumn();
-			dificuldadeReceita = new DataGridViewTextBoxColumn();
-			receitaAutor = new DataGridViewTextBoxColumn();
-			panel1.SuspendLayout();
-			groupBox1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-			SuspendLayout();
-			// 
-			// textBox1
-			// 
-			textBox1.Location = new Point(3, 3);
-			textBox1.Multiline = true;
-			textBox1.Name = "textBox1";
-			textBox1.Size = new Size(457, 33);
-			textBox1.TabIndex = 0;
-			// 
-			// panel1
-			// 
-			panel1.Controls.Add(btnBuscarReceita);
-			panel1.Controls.Add(textBox1);
-			panel1.Location = new Point(21, 12);
-			panel1.Name = "panel1";
-			panel1.Size = new Size(1015, 42);
-			panel1.TabIndex = 1;
-			// 
-			// btnBuscarReceita
-			// 
-			btnBuscarReceita.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-			btnBuscarReceita.BackColor = SystemColors.Control;
-			btnBuscarReceita.Font = new Font("Arial Black", 9F, FontStyle.Bold, GraphicsUnit.Point);
-			btnBuscarReceita.Location = new Point(496, 3);
-			btnBuscarReceita.Name = "btnBuscarReceita";
-			btnBuscarReceita.Padding = new Padding(5);
-			btnBuscarReceita.Size = new Size(284, 34);
-			btnBuscarReceita.TabIndex = 1;
-			btnBuscarReceita.Text = "Buscar Receita";
-			btnBuscarReceita.UseVisualStyleBackColor = false;
-			// 
-			// groupBox1
-			// 
-			groupBox1.Controls.Add(dataGridView1);
-			groupBox1.Location = new Point(21, 60);
-			groupBox1.Name = "groupBox1";
-			groupBox1.Size = new Size(1015, 462);
-			groupBox1.TabIndex = 2;
-			groupBox1.TabStop = false;
-			groupBox1.Text = "Receitas";
-			// 
-			// dataGridView1
-			// 
-			dataGridView1.AllowUserToAddRows = false;
-			dataGridView1.AllowUserToDeleteRows = false;
-			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridView1.Columns.AddRange(new DataGridViewColumn[] { nomeReceita, dificuldadeReceita, receitaAutor });
-			dataGridView1.Location = new Point(6, 22);
-			dataGridView1.Name = "dataGridView1";
-			dataGridView1.ReadOnly = true;
-			dataGridView1.RowTemplate.Height = 25;
-			dataGridView1.Size = new Size(994, 153);
-			dataGridView1.TabIndex = 0;
-			// 
-			// nomeReceita
-			// 
-			nomeReceita.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-			nomeReceita.HeaderText = "Receita";
-			nomeReceita.Name = "nomeReceita";
-			nomeReceita.ReadOnly = true;
-			// 
-			// dificuldadeReceita
-			// 
-			dificuldadeReceita.HeaderText = "Dificuldade";
-			dificuldadeReceita.Name = "dificuldadeReceita";
-			dificuldadeReceita.ReadOnly = true;
-			// 
-			// receitaAutor
-			// 
-			receitaAutor.HeaderText = "Autor";
-			receitaAutor.Name = "receitaAutor";
-			receitaAutor.ReadOnly = true;
-			// 
-			// telaPrincipal
-			// 
-			AutoScaleDimensions = new SizeF(7F, 15F);
-			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(1057, 564);
-			Controls.Add(groupBox1);
-			Controls.Add(panel1);
-			Name = "telaPrincipal";
-			Text = "Receitas";
-			panel1.ResumeLayout(false);
-			panel1.PerformLayout();
-			groupBox1.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-			ResumeLayout(false);
+            this.gpBoxMenu = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.gpBoxReceitas = new System.Windows.Forms.GroupBox();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.gpBoxMenu.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.gpBoxReceitas.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // gpBoxMenu
+            // 
+            this.gpBoxMenu.Controls.Add(this.panel1);
+            this.gpBoxMenu.Controls.Add(this.button1);
+            this.gpBoxMenu.Location = new System.Drawing.Point(12, 12);
+            this.gpBoxMenu.Name = "gpBoxMenu";
+            this.gpBoxMenu.Size = new System.Drawing.Size(755, 62);
+            this.gpBoxMenu.TabIndex = 0;
+            this.gpBoxMenu.TabStop = false;
+            this.gpBoxMenu.Text = "MENU";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Location = new System.Drawing.Point(137, 15);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(612, 41);
+            this.panel1.TabIndex = 3;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.AutoCompleteCustomSource.AddRange(new string[] {
+            "TODOS",
+            "TÍTULO",
+            "INGREDIENTES",
+            "DIFICULDADE"});
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "TODOS",
+            "TITULO",
+            "INGREDIENTE",
+            "DIFICULDADE"});
+            this.comboBox1.Location = new System.Drawing.Point(436, 9);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(163, 23);
+            this.comboBox1.TabIndex = 3;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(132, 9);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(298, 23);
+            this.textBox1.TabIndex = 2;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(12, 7);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(115, 28);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Pesquisar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(20, 22);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(111, 28);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Adicionar Receita";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // gpBoxReceitas
+            // 
+            this.gpBoxReceitas.Controls.Add(this.flowLayoutPanel1);
+            this.gpBoxReceitas.Location = new System.Drawing.Point(12, 84);
+            this.gpBoxReceitas.Name = "gpBoxReceitas";
+            this.gpBoxReceitas.Size = new System.Drawing.Size(755, 398);
+            this.gpBoxReceitas.TabIndex = 1;
+            this.gpBoxReceitas.TabStop = false;
+            this.gpBoxReceitas.Text = "RECEITAS";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(8, 19);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(742, 373);
+            this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // telaPrincipal
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(778, 487);
+            this.Controls.Add(this.gpBoxReceitas);
+            this.Controls.Add(this.gpBoxMenu);
+            this.Name = "telaPrincipal";
+            this.Text = "Receitas";
+            this.gpBoxMenu.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.gpBoxReceitas.ResumeLayout(false);
+            this.ResumeLayout(false);
+
 		}
 
-		#endregion
+        #endregion
 
-		private TextBox textBox1;
-		private Panel panel1;
-		private Button btnBuscarReceita;
-		private GroupBox groupBox1;
-		private DataGridView dataGridView1;
-		private DataGridViewTextBoxColumn nomeReceita;
-		private DataGridViewTextBoxColumn dificuldadeReceita;
-		private DataGridViewTextBoxColumn receitaAutor;
-	}
+        private GroupBox gpBoxMenu;
+        private Button button2;
+        private Button button1;
+        private Panel panel1;
+        private ComboBox comboBox1;
+        private TextBox textBox1;
+        private GroupBox gpBoxReceitas;
+        private FlowLayoutPanel flowLayoutPanel1;
+    }
 }
