@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Receitas_hml
 {
-	internal class Arquivo
+	public static class Arquivo
 	{
 		public static string caminhoArquivo = "bdReceitas.json";
 
@@ -25,7 +25,7 @@ namespace Receitas_hml
 			
 		}
 
-		public static void RemoveContato(int idContato)
+		public static void RemoveReceita()
 		{
 			dynamic objJson = JsonConvert.DeserializeObject(File.ReadAllText(caminhoArquivo));
 			//Remove o contato
