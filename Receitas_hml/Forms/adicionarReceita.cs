@@ -16,5 +16,22 @@ namespace Receitas_hml.Forms
 		{
 			InitializeComponent();
 		}
+
+		private void label2_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void btnAdicionarIngredientes_Click(object sender, EventArgs e)
+		{
+			String ingrediente = txtBoxIngredientes.Text;
+			lstBoxIngredientes.Items.Add(ingrediente);
+		}
+
+		private void btnRemoverIngrediente_Click(object sender, EventArgs e)
+		{
+			//Remove o item selecionado do lixtbox
+			lstBoxIngredientes.Items.RemoveAt(lstBoxIngredientes.SelectedIndex);
+		}
 	}
 }
