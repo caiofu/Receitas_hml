@@ -33,5 +33,15 @@ namespace Receitas_hml.Forms
 			//Remove o item selecionado do lixtbox
 			lstBoxIngredientes.Items.RemoveAt(lstBoxIngredientes.SelectedIndex);
 		}
+
+		private void label3_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void btnAdicionarPreparo_Click(object sender, EventArgs e)
+		{
+			lstBoxPreparo.Items.Add(txtBoxPreparo.Text);
+		}
 	}
 }
