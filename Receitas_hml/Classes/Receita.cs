@@ -8,7 +8,7 @@ namespace Receitas_hml
 {
 	internal class Receita
 	{
-		String nome { get; set; }
+		public String nome { get; set; }
 		String imagem { get; set; } 
 		List<String> ingredientes = new List<String>();
 		bool favorito = false; //padrão
