@@ -45,10 +45,15 @@
 			groupBox3 = new GroupBox();
 			button1 = new Button();
 			panel1 = new Panel();
+			groupBox4 = new GroupBox();
+			btnAdicionaFotoReceita = new Button();
+			picBoxFotoReceita = new PictureBox();
 			groupBox1.SuspendLayout();
 			groupBox2.SuspendLayout();
 			groupBox3.SuspendLayout();
 			panel1.SuspendLayout();
+			groupBox4.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)picBoxFotoReceita).BeginInit();
 			SuspendLayout();
 			// 
 			// label1
@@ -123,7 +128,7 @@
 			groupBox1.Controls.Add(label2);
 			groupBox1.Controls.Add(txtBoxIngredientes);
 			groupBox1.Controls.Add(btnAdicionarIngredientes);
-			groupBox1.Location = new Point(63, 150);
+			groupBox1.Location = new Point(61, 215);
 			groupBox1.Name = "groupBox1";
 			groupBox1.Size = new Size(573, 208);
 			groupBox1.TabIndex = 7;
@@ -136,7 +141,7 @@
 			groupBox2.Controls.Add(btnAdicionarPreparo);
 			groupBox2.Controls.Add(txtBoxPreparo);
 			groupBox2.Controls.Add(label3);
-			groupBox2.Location = new Point(63, 359);
+			groupBox2.Location = new Point(61, 424);
 			groupBox2.Name = "groupBox2";
 			groupBox2.Size = new Size(573, 205);
 			groupBox2.TabIndex = 8;
@@ -193,7 +198,7 @@
 			// 
 			groupBox3.Controls.Add(label1);
 			groupBox3.Controls.Add(textBox1);
-			groupBox3.Location = new Point(63, 85);
+			groupBox3.Location = new Point(61, 150);
 			groupBox3.Name = "groupBox3";
 			groupBox3.Size = new Size(573, 66);
 			groupBox3.TabIndex = 9;
@@ -204,7 +209,7 @@
 			button1.BackColor = Color.FromArgb(0, 192, 192);
 			button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
 			button1.ForeColor = Color.White;
-			button1.Location = new Point(457, 570);
+			button1.Location = new Point(455, 635);
 			button1.Name = "button1";
 			button1.Size = new Size(179, 50);
 			button1.TabIndex = 10;
@@ -213,26 +218,60 @@
 			// 
 			// panel1
 			// 
+			panel1.Controls.Add(groupBox4);
 			panel1.Controls.Add(groupBox3);
 			panel1.Controls.Add(button1);
 			panel1.Controls.Add(groupBox1);
 			panel1.Controls.Add(groupBox2);
 			panel1.Location = new Point(12, 12);
 			panel1.Name = "panel1";
-			panel1.Size = new Size(696, 637);
+			panel1.Size = new Size(696, 700);
 			panel1.TabIndex = 11;
+			// 
+			// groupBox4
+			// 
+			groupBox4.Controls.Add(btnAdicionaFotoReceita);
+			groupBox4.Controls.Add(picBoxFotoReceita);
+			groupBox4.Location = new Point(61, 15);
+			groupBox4.Name = "groupBox4";
+			groupBox4.Size = new Size(573, 138);
+			groupBox4.TabIndex = 11;
+			groupBox4.TabStop = false;
+			// 
+			// btnAdicionaFotoReceita
+			// 
+			btnAdicionaFotoReceita.BackColor = Color.LightSeaGreen;
+			btnAdicionaFotoReceita.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+			btnAdicionaFotoReceita.ForeColor = Color.White;
+			btnAdicionaFotoReceita.Location = new Point(230, 47);
+			btnAdicionaFotoReceita.Name = "btnAdicionaFotoReceita";
+			btnAdicionaFotoReceita.Size = new Size(179, 50);
+			btnAdicionaFotoReceita.TabIndex = 12;
+			btnAdicionaFotoReceita.Text = "ADICIONAR IMAGEM";
+			btnAdicionaFotoReceita.UseVisualStyleBackColor = false;
+			btnAdicionaFotoReceita.Click += btnAdicionaFotoReceita_Click;
+			// 
+			// picBoxFotoReceita
+			// 
+			picBoxFotoReceita.BackColor = SystemColors.ActiveBorder;
+			picBoxFotoReceita.Location = new Point(8, 13);
+			picBoxFotoReceita.Name = "picBoxFotoReceita";
+			picBoxFotoReceita.Size = new Size(175, 116);
+			picBoxFotoReceita.SizeMode = PictureBoxSizeMode.Zoom;
+			picBoxFotoReceita.TabIndex = 0;
+			picBoxFotoReceita.TabStop = false;
 			// 
 			// adicionarReceita
 			// 
 			AllowDrop = true;
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(729, 661);
+			ClientSize = new Size(729, 724);
 			Controls.Add(panel1);
 			Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			Name = "adicionarReceita";
-			Text = "adicionarReceita";
+			Text = "Adicionar Receita";
 			groupBox1.ResumeLayout(false);
 			groupBox1.PerformLayout();
 			groupBox2.ResumeLayout(false);
@@ -240,6 +279,8 @@
 			groupBox3.ResumeLayout(false);
 			groupBox3.PerformLayout();
 			panel1.ResumeLayout(false);
+			groupBox4.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)picBoxFotoReceita).EndInit();
 			ResumeLayout(false);
 		}
 
@@ -262,5 +303,8 @@
 		private TextBox txtBoxPreparo;
 		private Button button1;
 		private Panel panel1;
+		private GroupBox groupBox4;
+		private Button btnAdicionaFotoReceita;
+		private PictureBox picBoxFotoReceita;
 	}
 }

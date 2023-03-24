@@ -43,5 +43,19 @@ namespace Receitas_hml.Forms
 		{
 			lstBoxPreparo.Items.Add(txtBoxPreparo.Text);
 		}
+
+		private void btnAdicionaFotoReceita_Click(object sender, EventArgs e)
+		{
+			OpenFileDialog imagem = new OpenFileDialog();
+			imagem.Filter = "Imagem JPG | *.png";
+			DialogResult respota = imagem.ShowDialog();
+
+			//Valida se carregou corretamente
+			if (respota == DialogResult.OK)
+			{
+				picBoxFotoReceita.ImageLocation = imagem.FileName;
+				
+			}
+		}
 	}
 }
