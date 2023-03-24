@@ -28,8 +28,9 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			components = new System.ComponentModel.Container();
 			label1 = new Label();
-			textBox1 = new TextBox();
+			txtBoxNomeReceita = new TextBox();
 			label2 = new Label();
 			txtBoxIngredientes = new TextBox();
 			btnAdicionarIngredientes = new Button();
@@ -43,17 +44,19 @@
 			txtBoxPreparo = new TextBox();
 			label3 = new Label();
 			groupBox3 = new GroupBox();
-			button1 = new Button();
+			btnAdicionarReceita = new Button();
 			panel1 = new Panel();
 			groupBox4 = new GroupBox();
 			btnAdicionaFotoReceita = new Button();
 			picBoxFotoReceita = new PictureBox();
+			errorProviderValidaReceita = new ErrorProvider(components);
 			groupBox1.SuspendLayout();
 			groupBox2.SuspendLayout();
 			groupBox3.SuspendLayout();
 			panel1.SuspendLayout();
 			groupBox4.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)picBoxFotoReceita).BeginInit();
+			((System.ComponentModel.ISupportInitialize)errorProviderValidaReceita).BeginInit();
 			SuspendLayout();
 			// 
 			// label1
@@ -66,12 +69,12 @@
 			label1.TabIndex = 0;
 			label1.Text = "NOME DA RECEITA";
 			// 
-			// textBox1
+			// txtBoxNomeReceita
 			// 
-			textBox1.Location = new Point(157, 22);
-			textBox1.Name = "textBox1";
-			textBox1.Size = new Size(386, 23);
-			textBox1.TabIndex = 1;
+			txtBoxNomeReceita.Location = new Point(157, 22);
+			txtBoxNomeReceita.Name = "txtBoxNomeReceita";
+			txtBoxNomeReceita.Size = new Size(386, 23);
+			txtBoxNomeReceita.TabIndex = 1;
 			// 
 			// label2
 			// 
@@ -197,30 +200,31 @@
 			// groupBox3
 			// 
 			groupBox3.Controls.Add(label1);
-			groupBox3.Controls.Add(textBox1);
+			groupBox3.Controls.Add(txtBoxNomeReceita);
 			groupBox3.Location = new Point(61, 150);
 			groupBox3.Name = "groupBox3";
 			groupBox3.Size = new Size(573, 66);
 			groupBox3.TabIndex = 9;
 			groupBox3.TabStop = false;
 			// 
-			// button1
+			// btnAdicionarReceita
 			// 
-			button1.BackColor = Color.FromArgb(0, 192, 192);
-			button1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-			button1.ForeColor = Color.White;
-			button1.Location = new Point(455, 635);
-			button1.Name = "button1";
-			button1.Size = new Size(179, 50);
-			button1.TabIndex = 10;
-			button1.Text = "ADICIONAR RECEITA";
-			button1.UseVisualStyleBackColor = false;
+			btnAdicionarReceita.BackColor = Color.FromArgb(0, 192, 192);
+			btnAdicionarReceita.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+			btnAdicionarReceita.ForeColor = Color.White;
+			btnAdicionarReceita.Location = new Point(455, 635);
+			btnAdicionarReceita.Name = "btnAdicionarReceita";
+			btnAdicionarReceita.Size = new Size(179, 50);
+			btnAdicionarReceita.TabIndex = 10;
+			btnAdicionarReceita.Text = "ADICIONAR RECEITA";
+			btnAdicionarReceita.UseVisualStyleBackColor = false;
+			btnAdicionarReceita.Click += btnAdicionarReceita_Click;
 			// 
 			// panel1
 			// 
 			panel1.Controls.Add(groupBox4);
 			panel1.Controls.Add(groupBox3);
-			panel1.Controls.Add(button1);
+			panel1.Controls.Add(btnAdicionarReceita);
 			panel1.Controls.Add(groupBox1);
 			panel1.Controls.Add(groupBox2);
 			panel1.Location = new Point(12, 12);
@@ -261,6 +265,10 @@
 			picBoxFotoReceita.TabIndex = 0;
 			picBoxFotoReceita.TabStop = false;
 			// 
+			// errorProvider1
+			// 
+			errorProviderValidaReceita.ContainerControl = this;
+			// 
 			// adicionarReceita
 			// 
 			AllowDrop = true;
@@ -272,6 +280,7 @@
 			FormBorderStyle = FormBorderStyle.FixedToolWindow;
 			Name = "adicionarReceita";
 			Text = "Adicionar Receita";
+			Load += adicionarReceita_Load;
 			groupBox1.ResumeLayout(false);
 			groupBox1.PerformLayout();
 			groupBox2.ResumeLayout(false);
@@ -281,13 +290,14 @@
 			panel1.ResumeLayout(false);
 			groupBox4.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)picBoxFotoReceita).EndInit();
+			((System.ComponentModel.ISupportInitialize)errorProviderValidaReceita).EndInit();
 			ResumeLayout(false);
 		}
 
 		#endregion
 
 		private Label label1;
-		private TextBox textBox1;
+		private TextBox txtBoxNomeReceita;
 		private Label label2;
 		private TextBox txtBoxIngredientes;
 		private Button btnAdicionarIngredientes;
@@ -301,10 +311,11 @@
 		private ListBox lstBoxPreparo;
 		private Button btnAdicionarPreparo;
 		private TextBox txtBoxPreparo;
-		private Button button1;
+		private Button btnAdicionarReceita;
 		private Panel panel1;
 		private GroupBox groupBox4;
 		private Button btnAdicionaFotoReceita;
 		private PictureBox picBoxFotoReceita;
+		private ErrorProvider errorProviderValidaReceita;
 	}
 }
