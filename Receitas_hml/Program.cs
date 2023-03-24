@@ -1,3 +1,5 @@
+using Receitas_hml.Forms;
+
 namespace Receitas_hml
 {
 	internal static class Program
@@ -10,17 +12,19 @@ namespace Receitas_hml
 		{
 			//CRIANDO A LISTA PARA LIDAR COM AS RECEIRAS
 			List<Receita> ListaDeReceitas= new List<Receita>();
+			List<String> ingredientes = new List<String>();
+			List<String> modoDePreparo = new List<String>();
+			Receita novaReceita = new Receita("teste","caminho",ingredientes, false, "facil", modoDePreparo);
+			ListaDeReceitas.Add(novaReceita);
+			Arquivo.CriaArquivo(ListaDeReceitas);
 
-			//CRIA O ARQUIVO JSON CASO ELE NÃO EXISTA
-			if(File.Exists(Arquivo.caminhoArquivo) == false)
-			{
-				Arquivo.CriaArquivo(ListaDeReceitas);
-			}
 
-			// To customize application configuration such as set high DPI settings or default font,
+			
+
+		// To customize application configuration such as set high DPI settings or default font,
 			// see https://aka.ms/applicationconfiguration.
 			ApplicationConfiguration.Initialize();
-			Application.Run(new telaPrincipal());
+			Application.Run(new adicionarReceita());
 		}
 	}
 }

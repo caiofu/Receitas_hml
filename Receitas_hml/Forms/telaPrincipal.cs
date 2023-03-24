@@ -1,31 +1,15 @@
 namespace Receitas_hml
 {
-    public partial class telaPrincipal : BaseForm
-    {
-        public telaPrincipal()
-        {
-            InitializeComponent();
-        }
+	public partial class telaPrincipal : BaseForm
+	{
+		public telaPrincipal()
+		{
+			InitializeComponent();
+		}
 
-        private void BtnOnClickBuscaReceita(object sender, EventArgs e)
-        {
-            List<Receita> ListadeReceitas = new List<Receita>();
-
-            foreach(var LiReceitas in ListadeReceitas)
-            {
-                if(txtBuscaReceita.Text == "")
-                {
-                    MessageBox.Show("Digite algo se deseja pesquisar!");
-                }
-                else if (LiReceitas.nome.Contains(txtBuscaReceita.Text))
-                {
-                    
-                }
-                
-            }
-
-        }
-
-       
-    }
+		private void btnAdicionarReceita_Click(object sender, EventArgs e)
+		{
+			//Aqui vamos chamar o form para cadastrar a nova receita
+		}
+	}
 }
