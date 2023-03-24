@@ -15,7 +15,20 @@ namespace Receitas_hml
 		public detalhesReceita()
 		{
 			InitializeComponent();
-		}
+            // Criar a lista de itens que deseja adicionar
+            List<string> itens = new List<string>();
+            itens.Add("Item 1");
+            itens.Add("Item 2");
+            itens.Add("Item 3");
+
+
+            // Adicionar itens ao ListView
+            foreach (string item in itens)
+            {
+                listView1.Items.Add(item);
+            }
+
+        }
 
 		private void groupBox2_Enter(object sender, EventArgs e)
 		{
@@ -26,5 +39,10 @@ namespace Receitas_hml
 		{
 
 		}
-	}
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
