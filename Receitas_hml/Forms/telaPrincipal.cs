@@ -1,3 +1,5 @@
+using Receitas_hml.Forms;
+
 namespace Receitas_hml
 {
 	public partial class telaPrincipal : BaseForm
@@ -9,7 +11,8 @@ namespace Receitas_hml
 
 		private void btnAdicionarReceita_Click(object sender, EventArgs e)
 		{
-			//Aqui vamos chamar o form para cadastrar a nova receita
-		}
+			adicionarReceita addReceita = new adicionarReceita();
+			addReceita.ShowDialog();
+        }
 	}
 }

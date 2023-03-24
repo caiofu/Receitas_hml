@@ -54,7 +54,7 @@ namespace Receitas_hml.Forms
 			if (respota == DialogResult.OK)
 			{
 				picBoxFotoReceita.ImageLocation = imagem.FileName;
-				
+
 			}
 		}
 	}
