@@ -29,68 +29,67 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CardReceita));
-            this.pctBoxImagem = new System.Windows.Forms.PictureBox();
-            this.lbNomeReceita = new System.Windows.Forms.Label();
-            this.lbDificuldade = new System.Windows.Forms.Label();
-            this.lbNivelDificuldade = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pctBoxImagem)).BeginInit();
-            this.SuspendLayout();
+            pctBoxImagem = new PictureBox();
+            lbNomeReceita = new Label();
+            lbDificuldade = new Label();
+            lbNivelDificuldade = new Label();
+            ((System.ComponentModel.ISupportInitialize)pctBoxImagem).BeginInit();
+            SuspendLayout();
             // 
             // pctBoxImagem
             // 
-            this.pctBoxImagem.Image = ((System.Drawing.Image)(resources.GetObject("pctBoxImagem.Image")));
-            this.pctBoxImagem.Location = new System.Drawing.Point(0, 0);
-            this.pctBoxImagem.Name = "pctBoxImagem";
-            this.pctBoxImagem.Size = new System.Drawing.Size(162, 142);
-            this.pctBoxImagem.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pctBoxImagem.TabIndex = 0;
-            this.pctBoxImagem.TabStop = false;
+            pctBoxImagem.Image = (Image)resources.GetObject("pctBoxImagem.Image");
+            pctBoxImagem.Location = new Point(0, 0);
+            pctBoxImagem.Name = "pctBoxImagem";
+            pctBoxImagem.Size = new Size(162, 142);
+            pctBoxImagem.SizeMode = PictureBoxSizeMode.Zoom;
+            pctBoxImagem.TabIndex = 0;
+            pctBoxImagem.TabStop = false;
             // 
             // lbNomeReceita
             // 
-            this.lbNomeReceita.AutoSize = true;
-            this.lbNomeReceita.Font = new System.Drawing.Font("Segoe UI Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbNomeReceita.Location = new System.Drawing.Point(196, 33);
-            this.lbNomeReceita.MaximumSize = new System.Drawing.Size(200, 0);
-            this.lbNomeReceita.MinimumSize = new System.Drawing.Size(200, 0);
-            this.lbNomeReceita.Name = "lbNomeReceita";
-            this.lbNomeReceita.Size = new System.Drawing.Size(200, 21);
-            this.lbNomeReceita.TabIndex = 1;
-            this.lbNomeReceita.Text = "Nome Receita";
-            this.lbNomeReceita.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lbNomeReceita.AutoSize = true;
+            lbNomeReceita.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lbNomeReceita.Location = new Point(284, 53);
+            lbNomeReceita.MaximumSize = new Size(200, 0);
+            lbNomeReceita.MinimumSize = new Size(200, 0);
+            lbNomeReceita.Name = "lbNomeReceita";
+            lbNomeReceita.Size = new Size(200, 21);
+            lbNomeReceita.TabIndex = 1;
+            lbNomeReceita.Text = "Nome Receita";
+            lbNomeReceita.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lbDificuldade
             // 
-            this.lbDificuldade.AutoSize = true;
-            this.lbDificuldade.Location = new System.Drawing.Point(227, 89);
-            this.lbDificuldade.Name = "lbDificuldade";
-            this.lbDificuldade.Size = new System.Drawing.Size(70, 15);
-            this.lbDificuldade.TabIndex = 2;
-            this.lbDificuldade.Text = "Dificuldade:";
+            lbDificuldade.AutoSize = true;
+            lbDificuldade.Location = new Point(292, 127);
+            lbDificuldade.Name = "lbDificuldade";
+            lbDificuldade.Size = new Size(70, 15);
+            lbDificuldade.TabIndex = 2;
+            lbDificuldade.Text = "Dificuldade:";
             // 
             // lbNivelDificuldade
             // 
-            this.lbNivelDificuldade.AutoSize = true;
-            this.lbNivelDificuldade.Location = new System.Drawing.Point(293, 89);
-            this.lbNivelDificuldade.Name = "lbNivelDificuldade";
-            this.lbNivelDificuldade.Size = new System.Drawing.Size(126, 15);
-            this.lbNivelDificuldade.TabIndex = 3;
-            this.lbNivelDificuldade.Text = "Fácil/Moderado/Difícil";
+            lbNivelDificuldade.AutoSize = true;
+            lbNivelDificuldade.Location = new Point(358, 127);
+            lbNivelDificuldade.Name = "lbNivelDificuldade";
+            lbNivelDificuldade.Size = new Size(126, 15);
+            lbNivelDificuldade.TabIndex = 3;
+            lbNivelDificuldade.Text = "Fácil/Moderado/Difícil";
             // 
             // CardReceita
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.lbNivelDificuldade);
-            this.Controls.Add(this.lbDificuldade);
-            this.Controls.Add(this.lbNomeReceita);
-            this.Controls.Add(this.pctBoxImagem);
-            this.Name = "CardReceita";
-            this.Size = new System.Drawing.Size(432, 142);
-            ((System.ComponentModel.ISupportInitialize)(this.pctBoxImagem)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(lbNivelDificuldade);
+            Controls.Add(lbDificuldade);
+            Controls.Add(lbNomeReceita);
+            Controls.Add(pctBoxImagem);
+            Name = "CardReceita";
+            Size = new Size(619, 200);
+            ((System.ComponentModel.ISupportInitialize)pctBoxImagem).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
