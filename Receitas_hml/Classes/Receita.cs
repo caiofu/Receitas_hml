@@ -8,7 +8,9 @@ namespace Receitas_hml
 {
 	public class Receita
 	{
+		public int id { get; set; }
 		public String nomeReceita { get; set; }
+		
 		public String imagem { get; set; } 
 		public List<String> ingredientes = new List<String>();
 		public bool favorito = false; //padrão
@@ -17,8 +19,10 @@ namespace Receitas_hml
 		
 
 		//CONSTRUTOR
-		public Receita(String nomeReceita, String imagem, List<String> ingredientes, bool favorito, string dificuldade,List<String> modoPreparo)
+		public Receita() { }
+		public Receita(int id,String nomeReceita, String imagem, List<String> ingredientes, bool favorito, string dificuldade,List<String> modoPreparo)
         {
+			this.id = id;
 			this.nomeReceita = nomeReceita;
 			this.imagem = imagem;
 			this.ingredientes = ingredientes;
