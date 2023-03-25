@@ -1,3 +1,4 @@
+using Newtonsoft.Json;
 using Receitas_hml.Forms;
 
 namespace Receitas_hml
@@ -13,18 +14,41 @@ namespace Receitas_hml
 
 		static void Main()
 		{
-			List<String> ingredientes = new List<String>();
-			List<String> modoDePreparo = new List<String>();
-			Receita novaReceita = new Receita("teste", "caminho", ingredientes, false, "facil", modoDePreparo);
-			ListaDeReceitas.Add(novaReceita);
-			Arquivo.CriaArquivo(ListaDeReceitas);
+			//CARREGANDO DADOS DO ARQUIVO JSON PARA LISTA CASO TENHA DADOS
+			dynamic objJsonCarrega = JsonConvert.DeserializeObject(File.ReadAllText(Arquivo.caminhoArquivo));
+
+			if (File.Exists(Arquivo.caminhoArquivo) && objJsonCarrega.Count > 0)
+			{
+				foreach (var item in objJsonCarrega)
+				{
+					Receita auxReceita = new Receita();
+					auxReceita.id = item.id;
+					auxReceita.nomeReceita = item.nomeReceita;
+					auxReceita.dificuldade = item.dificuldade;
+					auxReceita.imagem = item.imagem;
+
+                    //Loop para adicionar ingrediente
+                    foreach (var ingr in item.ingredientes)
+                    {
+						auxReceita.ingredientes.Add(ingr.ToString());
+                    }
+
+					//Loop para adicionar preparo
+					foreach (var prep in item.modoPreparo)
+					{
+						auxReceita.modoPreparo.Add(prep.ToString());
+					}
+
+					//Adicionando a lista
+					ListaDeReceitas.Add(auxReceita);
+				}
+
+			}
 
 
-
-
-			// To customize application configuration such as set high DPI settings or default font,
-			// see https://aka.ms/applicationconfiguration.
-			ApplicationConfiguration.Initialize();
+				// To customize application configuration such as set high DPI settings or default font,
+				// see https://aka.ms/applicationconfiguration.
+				ApplicationConfiguration.Initialize();
 			Application.Run(new telaPrincipal());
 		}
 	}
