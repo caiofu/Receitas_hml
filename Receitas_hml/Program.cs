@@ -15,6 +15,12 @@ namespace Receitas_hml
 		static void Main()
 		{
 			//CARREGANDO DADOS DO ARQUIVO JSON PARA LISTA CASO TENHA DADOS
+			if (File.Exists(Arquivo.caminhoArquivo) == false)
+			{
+				string json = JsonConvert.SerializeObject(ListaDeReceitas, Formatting.Indented); //Formatting.Indented para ficar organizado
+				File.WriteAllText(Arquivo.caminhoArquivo, json);
+			}
+
 			dynamic objJsonCarrega = JsonConvert.DeserializeObject(File.ReadAllText(Arquivo.caminhoArquivo));
 
 			if (File.Exists(Arquivo.caminhoArquivo) && objJsonCarrega.Count > 0)
