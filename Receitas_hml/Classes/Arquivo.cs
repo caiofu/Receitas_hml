@@ -12,6 +12,7 @@ namespace Receitas_hml
 	public static class Arquivo
 	{
 		public static string caminhoArquivo = "bdReceitas.json";
+		public static string caminhoDiretorioImg = "imgReceitas";
 
 		//METODOS
 		public static void CriaArquivo(List<Receita> ListaDeReceitas)
