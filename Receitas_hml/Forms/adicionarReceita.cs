@@ -24,14 +24,21 @@ namespace Receitas_hml.Forms
 
 		private void btnAdicionarIngredientes_Click(object sender, EventArgs e)
 		{
-			lstBoxIngredientes.Items.Add(txtBoxIngredientes.Text);
-			txtBoxIngredientes.Clear();
+			if(txtBoxIngredientes.Text != "" && txtBoxIngredientes.Text != " " )
+			{
+                lstBoxIngredientes.Items.Add(txtBoxIngredientes.Text);
+                txtBoxIngredientes.Clear();
+            }
+
 		}
 
 		private void btnRemoverIngrediente_Click(object sender, EventArgs e)
 		{
 			//Remove o item selecionado do lixtbox
-			lstBoxIngredientes.Items.RemoveAt(lstBoxIngredientes.SelectedIndex);
+			if(lstBoxIngredientes.Items.Count > 0)
+			{
+                lstBoxIngredientes.Items.RemoveAt(lstBoxIngredientes.SelectedIndex);
+            }
 		}
 
 		private void label3_Click(object sender, EventArgs e)
