@@ -102,7 +102,7 @@
             // gpBoxReceitas
             // 
             gpBoxReceitas.Controls.Add(flowLayoutPanelReceitas);
-            gpBoxReceitas.Location = new Point(12, 84);
+            gpBoxReceitas.Location = new Point(12, 80);
             gpBoxReceitas.Name = "gpBoxReceitas";
             gpBoxReceitas.Size = new Size(635, 398);
             gpBoxReceitas.TabIndex = 1;
@@ -111,10 +111,13 @@
             // 
             // flowLayoutPanelReceitas
             // 
+            flowLayoutPanelReceitas.AutoScroll = true;
+            flowLayoutPanelReceitas.FlowDirection = FlowDirection.TopDown;
             flowLayoutPanelReceitas.Location = new Point(8, 19);
             flowLayoutPanelReceitas.Name = "flowLayoutPanelReceitas";
             flowLayoutPanelReceitas.Size = new Size(617, 373);
             flowLayoutPanelReceitas.TabIndex = 0;
+            flowLayoutPanelReceitas.WrapContents = false;
             // 
             // telaPrincipal
             // 

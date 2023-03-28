@@ -33,15 +33,16 @@
             lbNomeReceita = new Label();
             lbDificuldade = new Label();
             lbNivelDificuldade = new Label();
+            lbDefault = new Label();
             ((System.ComponentModel.ISupportInitialize)pctBoxImagem).BeginInit();
             SuspendLayout();
             // 
             // pctBoxImagem
             // 
             pctBoxImagem.Image = (Image)resources.GetObject("pctBoxImagem.Image");
-            pctBoxImagem.Location = new Point(0, 0);
+            pctBoxImagem.Location = new Point(3, 3);
             pctBoxImagem.Name = "pctBoxImagem";
-            pctBoxImagem.Size = new Size(162, 142);
+            pctBoxImagem.Size = new Size(198, 172);
             pctBoxImagem.SizeMode = PictureBoxSizeMode.Zoom;
             pctBoxImagem.TabIndex = 0;
             pctBoxImagem.TabStop = false;
@@ -77,16 +78,33 @@
             lbNivelDificuldade.TabIndex = 3;
             lbNivelDificuldade.Text = "Fácil/Moderado/Difícil";
             // 
+            // lbDefault
+            // 
+            lbDefault.Anchor = AnchorStyles.None;
+            lbDefault.AutoSize = true;
+            lbDefault.Font = new Font("Segoe UI Black", 26.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lbDefault.Location = new Point(110, 20);
+            lbDefault.Name = "lbDefault";
+            lbDefault.Padding = new Padding(0, 50, 0, 0);
+            lbDefault.RightToLeft = RightToLeft.No;
+            lbDefault.Size = new Size(145, 97);
+            lbDefault.TabIndex = 4;
+            lbDefault.Text = "default";
+            lbDefault.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // CardReceita
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
+            BorderStyle = BorderStyle.FixedSingle;
+            Controls.Add(lbDefault);
             Controls.Add(lbNivelDificuldade);
             Controls.Add(lbDificuldade);
             Controls.Add(lbNomeReceita);
             Controls.Add(pctBoxImagem);
+            Location = new Point(100, 0);
             Name = "CardReceita";
-            Size = new Size(619, 200);
+            Size = new Size(608, 179);
+            Click += ReceitaEscolhida_Click;
             ((System.ComponentModel.ISupportInitialize)pctBoxImagem).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -98,5 +116,6 @@
         private Label lbNomeReceita;
         private Label lbDificuldade;
         private Label lbNivelDificuldade;
+        private Label lbDefault;
     }
 }

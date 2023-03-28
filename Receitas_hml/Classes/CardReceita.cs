@@ -19,6 +19,19 @@ namespace Receitas_hml.Classes
             lbNomeReceita.Text = receitaAtual.nomeReceita;
             lbNivelDificuldade.Text = receitaAtual.dificuldade;
         }
+        public CardReceita()
+        {
+            InitializeComponent();
+            lbDefault.Text = "Adicione uma receita";
+            pctBoxImagem.Visible = false;
+            lbNomeReceita.Visible = false;
+            lbDificuldade.Visible = false;
+            lbNivelDificuldade.Visible = false;
+        }
 
+        private void ReceitaEscolhida_Click(object sender, EventArgs e)
+        {
+            //Abrir form da receita
+        }
     }
 }
