@@ -24,11 +24,15 @@ namespace Receitas_hml.Forms
 
 		private void btnAdicionarIngredientes_Click(object sender, EventArgs e)
 		{
-			if(txtBoxIngredientes.Text != "" && txtBoxIngredientes.Text != " " )
+			if(  txtBoxIngredientes.Text.Trim() != "" )
 			{
                 lstBoxIngredientes.Items.Add(txtBoxIngredientes.Text);
                 txtBoxIngredientes.Clear();
             }
+			else
+            {
+				MessageBox.Show("VOCÊ NÃO PODE ADICIONAR CAMPOS VAZIOS!");
+			}
 
 		}
 
@@ -48,8 +52,16 @@ namespace Receitas_hml.Forms
 
 		private void btnAdicionarPreparo_Click(object sender, EventArgs e)
 		{
-			lstBoxPreparo.Items.Add(txtBoxPreparo.Text);
-			txtBoxPreparo.Clear();
+			if(txtBoxPreparo.Text.Trim() != "")
+            {
+				lstBoxPreparo.Items.Add(txtBoxPreparo.Text);
+				txtBoxPreparo.Clear();
+			}
+			else
+            {
+				MessageBox.Show("VOCÊ NÃO PODE ADICIONAR CAMPOS VAZIOS!");
+            }
+			
 		}
 
 		private void btnAdicionaFotoReceita_Click(object sender, EventArgs e)
