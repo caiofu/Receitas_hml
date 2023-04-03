@@ -28,6 +28,7 @@ namespace Receitas_hml
             {
                 flowLayoutPanelReceitas.Controls.Add(new CardReceita());
             }
+            //dadawd
         }
     }
 }
