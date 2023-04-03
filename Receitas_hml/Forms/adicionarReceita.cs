@@ -64,6 +64,15 @@ namespace Receitas_hml.Forms
 			
 		}
 
+		private void btnRemoverPreparo_Click(object sender, EventArgs e)
+		{
+			//Remove o item selecionado do lixtbox
+			if (lstBoxPreparo.Items.Count > 0)
+			{
+				lstBoxPreparo.Items.RemoveAt(lstBoxPreparo.SelectedIndex);
+			}
+		}
+
 		private void btnAdicionaFotoReceita_Click(object sender, EventArgs e)
 		{
 			OpenFileDialog imagem = new OpenFileDialog();
@@ -131,13 +140,21 @@ namespace Receitas_hml.Forms
 
 				Arquivo.CriaArquivo(Program.ListaDeReceitas);
 
-				//Enviar mensagem de confirmaçao que a receita foi adicionada
-				//Criar uma validação para ver se realmente foi salva , e no momento por conta da padronização ta perguntando se deseja 
-				//realmente fechar, mudei a herança para form por hora
-				if(MessageBox.Show("Receita Salva!") == DialogResult.OK )
-				{
-					this.Close();
+				//VERIFICA SE O ARQUIVO FOI SALVO NO JSON.
+				dynamic objJson = Arquivo.LerAquivo();
+				if (Program.ListaDeReceitas.Count == objJson.Count)
+                {
+					if (MessageBox.Show("Receita Salva!") == DialogResult.OK)
+					{
+
+						this.Close();
+					}
 				}
+				else
+                {
+					MessageBox.Show("Erro! Sua receita não foi salva");
+                }
+					
 
 			}
 
@@ -205,5 +222,7 @@ namespace Receitas_hml.Forms
 		{
 
 		}
-	}
+
+       
+    }
 }
