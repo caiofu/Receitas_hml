@@ -42,7 +42,7 @@
             pctBoxImagem.Image = (Image)resources.GetObject("pctBoxImagem.Image");
             pctBoxImagem.Location = new Point(3, 3);
             pctBoxImagem.Name = "pctBoxImagem";
-            pctBoxImagem.Size = new Size(198, 172);
+            pctBoxImagem.Size = new Size(176, 172);
             pctBoxImagem.SizeMode = PictureBoxSizeMode.Zoom;
             pctBoxImagem.TabIndex = 0;
             pctBoxImagem.TabStop = false;
@@ -83,19 +83,17 @@
             lbDefault.Anchor = AnchorStyles.None;
             lbDefault.AutoSize = true;
             lbDefault.Font = new Font("Segoe UI Black", 26.25F, FontStyle.Bold, GraphicsUnit.Point);
-            lbDefault.Location = new Point(110, 20);
+            lbDefault.Location = new Point(111, 21);
             lbDefault.Name = "lbDefault";
             lbDefault.Padding = new Padding(0, 50, 0, 0);
             lbDefault.RightToLeft = RightToLeft.No;
-            lbDefault.Size = new Size(145, 97);
+            lbDefault.Size = new Size(0, 97);
             lbDefault.TabIndex = 4;
-            lbDefault.Text = "default";
             lbDefault.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // CardReceita
             // 
             AutoScaleMode = AutoScaleMode.None;
-            BorderStyle = BorderStyle.FixedSingle;
             Controls.Add(lbDefault);
             Controls.Add(lbNivelDificuldade);
             Controls.Add(lbDificuldade);
@@ -103,7 +101,7 @@
             Controls.Add(pctBoxImagem);
             Location = new Point(100, 0);
             Name = "CardReceita";
-            Size = new Size(608, 179);
+            Size = new Size(610, 181);
             Click += ReceitaEscolhida_Click;
             ((System.ComponentModel.ISupportInitialize)pctBoxImagem).EndInit();
             ResumeLayout(false);
