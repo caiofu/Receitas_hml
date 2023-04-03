@@ -28,112 +28,121 @@
         /// </summary>
         private void InitializeComponent()
         {
-            gpBoxMenu = new GroupBox();
-            panel1 = new Panel();
-            cboxFiltros = new ComboBox();
-            txBoxPesquisaReceita = new TextBox();
-            btnPesquisarReceita = new Button();
-            btnAdicionarReceita = new Button();
-            gpBoxReceitas = new GroupBox();
-            flowLayoutPanelReceitas = new FlowLayoutPanel();
-            gpBoxMenu.SuspendLayout();
-            panel1.SuspendLayout();
-            gpBoxReceitas.SuspendLayout();
-            SuspendLayout();
+            this.gpBoxMenu = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.cboxFiltros = new System.Windows.Forms.ComboBox();
+            this.txBoxPesquisaReceita = new System.Windows.Forms.TextBox();
+            this.btnPesquisarReceita = new System.Windows.Forms.Button();
+            this.btnAdicionarReceita = new System.Windows.Forms.Button();
+            this.gpBoxReceitas = new System.Windows.Forms.GroupBox();
+            this.flowLayoutPanelReceitas = new System.Windows.Forms.FlowLayoutPanel();
+            this.gpBoxMenu.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.gpBoxReceitas.SuspendLayout();
+            this.SuspendLayout();
             // 
             // gpBoxMenu
             // 
-            gpBoxMenu.Controls.Add(panel1);
-            gpBoxMenu.Controls.Add(btnAdicionarReceita);
-            gpBoxMenu.Location = new Point(12, 12);
-            gpBoxMenu.Name = "gpBoxMenu";
-            gpBoxMenu.Size = new Size(635, 62);
-            gpBoxMenu.TabIndex = 0;
-            gpBoxMenu.TabStop = false;
-            gpBoxMenu.Text = "MENU";
+            this.gpBoxMenu.Controls.Add(this.panel1);
+            this.gpBoxMenu.Controls.Add(this.btnAdicionarReceita);
+            this.gpBoxMenu.Location = new System.Drawing.Point(12, 12);
+            this.gpBoxMenu.Name = "gpBoxMenu";
+            this.gpBoxMenu.Size = new System.Drawing.Size(635, 62);
+            this.gpBoxMenu.TabIndex = 0;
+            this.gpBoxMenu.TabStop = false;
+            this.gpBoxMenu.Text = "MENU";
             // 
             // panel1
             // 
-            panel1.Controls.Add(cboxFiltros);
-            panel1.Controls.Add(txBoxPesquisaReceita);
-            panel1.Controls.Add(btnPesquisarReceita);
-            panel1.Location = new Point(137, 15);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(488, 41);
-            panel1.TabIndex = 3;
+            this.panel1.Controls.Add(this.cboxFiltros);
+            this.panel1.Controls.Add(this.txBoxPesquisaReceita);
+            this.panel1.Controls.Add(this.btnPesquisarReceita);
+            this.panel1.Location = new System.Drawing.Point(137, 15);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(488, 41);
+            this.panel1.TabIndex = 3;
             // 
             // cboxFiltros
             // 
-            cboxFiltros.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            cboxFiltros.AutoCompleteCustomSource.AddRange(new string[] { "TODOS", "TÍTULO", "INGREDIENTES", "DIFICULDADE" });
-            cboxFiltros.FormattingEnabled = true;
-            cboxFiltros.Items.AddRange(new object[] { "TODOS", "TITULO", "INGREDIENTE", "DIFICULDADE" });
-            cboxFiltros.Location = new Point(379, 9);
-            cboxFiltros.Name = "cboxFiltros";
-            cboxFiltros.Size = new Size(106, 23);
-            cboxFiltros.TabIndex = 3;
+            this.cboxFiltros.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cboxFiltros.AutoCompleteCustomSource.AddRange(new string[] {
+            "TODOS",
+            "TÍTULO",
+            "INGREDIENTES",
+            "DIFICULDADE"});
+            this.cboxFiltros.FormattingEnabled = true;
+            this.cboxFiltros.Items.AddRange(new object[] {
+            "TODOS",
+            "TITULO",
+            "INGREDIENTE",
+            "DIFICULDADE"});
+            this.cboxFiltros.Location = new System.Drawing.Point(379, 9);
+            this.cboxFiltros.Name = "cboxFiltros";
+            this.cboxFiltros.Size = new System.Drawing.Size(106, 23);
+            this.cboxFiltros.TabIndex = 3;
             // 
             // txBoxPesquisaReceita
             // 
-            txBoxPesquisaReceita.Location = new Point(132, 9);
-            txBoxPesquisaReceita.Name = "txBoxPesquisaReceita";
-            txBoxPesquisaReceita.Size = new Size(241, 23);
-            txBoxPesquisaReceita.TabIndex = 2;
+            this.txBoxPesquisaReceita.Location = new System.Drawing.Point(132, 9);
+            this.txBoxPesquisaReceita.Name = "txBoxPesquisaReceita";
+            this.txBoxPesquisaReceita.Size = new System.Drawing.Size(241, 23);
+            this.txBoxPesquisaReceita.TabIndex = 2;
             // 
             // btnPesquisarReceita
             // 
-            btnPesquisarReceita.Location = new Point(12, 7);
-            btnPesquisarReceita.Name = "btnPesquisarReceita";
-            btnPesquisarReceita.Size = new Size(115, 28);
-            btnPesquisarReceita.TabIndex = 1;
-            btnPesquisarReceita.Text = "Pesquisar";
-            btnPesquisarReceita.UseVisualStyleBackColor = true;
+            this.btnPesquisarReceita.Location = new System.Drawing.Point(12, 7);
+            this.btnPesquisarReceita.Name = "btnPesquisarReceita";
+            this.btnPesquisarReceita.Size = new System.Drawing.Size(115, 28);
+            this.btnPesquisarReceita.TabIndex = 1;
+            this.btnPesquisarReceita.Text = "Pesquisar";
+            this.btnPesquisarReceita.UseVisualStyleBackColor = true;
+            this.btnPesquisarReceita.Click += new System.EventHandler(this.btnPesquisarReceita_Click);
             // 
             // btnAdicionarReceita
             // 
-            btnAdicionarReceita.Location = new Point(20, 22);
-            btnAdicionarReceita.Name = "btnAdicionarReceita";
-            btnAdicionarReceita.Size = new Size(111, 28);
-            btnAdicionarReceita.TabIndex = 0;
-            btnAdicionarReceita.Text = "Adicionar Receita";
-            btnAdicionarReceita.UseVisualStyleBackColor = true;
-            btnAdicionarReceita.Click += btnAdicionarReceita_Click;
+            this.btnAdicionarReceita.Location = new System.Drawing.Point(20, 22);
+            this.btnAdicionarReceita.Name = "btnAdicionarReceita";
+            this.btnAdicionarReceita.Size = new System.Drawing.Size(111, 28);
+            this.btnAdicionarReceita.TabIndex = 0;
+            this.btnAdicionarReceita.Text = "Adicionar Receita";
+            this.btnAdicionarReceita.UseVisualStyleBackColor = true;
             // 
             // gpBoxReceitas
             // 
-            gpBoxReceitas.Controls.Add(flowLayoutPanelReceitas);
-            gpBoxReceitas.Location = new Point(12, 80);
-            gpBoxReceitas.Name = "gpBoxReceitas";
-            gpBoxReceitas.Size = new Size(635, 398);
-            gpBoxReceitas.TabIndex = 1;
-            gpBoxReceitas.TabStop = false;
-            gpBoxReceitas.Text = "RECEITAS";
+            this.gpBoxReceitas.Controls.Add(this.flowLayoutPanelReceitas);
+            this.gpBoxReceitas.Location = new System.Drawing.Point(12, 80);
+            this.gpBoxReceitas.Name = "gpBoxReceitas";
+            this.gpBoxReceitas.Size = new System.Drawing.Size(635, 398);
+            this.gpBoxReceitas.TabIndex = 1;
+            this.gpBoxReceitas.TabStop = false;
+            this.gpBoxReceitas.Text = "RECEITAS";
             // 
             // flowLayoutPanelReceitas
             // 
-            flowLayoutPanelReceitas.AutoScroll = true;
-            flowLayoutPanelReceitas.FlowDirection = FlowDirection.TopDown;
-            flowLayoutPanelReceitas.Location = new Point(8, 19);
-            flowLayoutPanelReceitas.Name = "flowLayoutPanelReceitas";
-            flowLayoutPanelReceitas.Size = new Size(617, 373);
-            flowLayoutPanelReceitas.TabIndex = 0;
-            flowLayoutPanelReceitas.WrapContents = false;
+            this.flowLayoutPanelReceitas.AutoScroll = true;
+            this.flowLayoutPanelReceitas.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanelReceitas.Location = new System.Drawing.Point(8, 19);
+            this.flowLayoutPanelReceitas.Name = "flowLayoutPanelReceitas";
+            this.flowLayoutPanelReceitas.Size = new System.Drawing.Size(617, 373);
+            this.flowLayoutPanelReceitas.TabIndex = 0;
+            this.flowLayoutPanelReceitas.WrapContents = false;
             // 
             // telaPrincipal
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(663, 487);
-            Controls.Add(gpBoxReceitas);
-            Controls.Add(gpBoxMenu);
-            Name = "telaPrincipal";
-            Text = "Receitas";
-            Load += telaPrincipal_Load;
-            gpBoxMenu.ResumeLayout(false);
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            gpBoxReceitas.ResumeLayout(false);
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(663, 487);
+            this.Controls.Add(this.gpBoxReceitas);
+            this.Controls.Add(this.gpBoxMenu);
+            this.Name = "telaPrincipal";
+            this.Text = "Receitas";
+            this.gpBoxMenu.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.gpBoxReceitas.ResumeLayout(false);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
