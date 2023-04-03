@@ -145,6 +145,6 @@
         private ComboBox cboxFiltros;
         private TextBox txBoxPesquisaReceita;
         private GroupBox gpBoxReceitas;
-        private FlowLayoutPanel flowLayoutPanelReceitas;
+        public static FlowLayoutPanel flowLayoutPanelReceitas;
     }
 }

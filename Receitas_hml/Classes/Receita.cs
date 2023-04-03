@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Receitas_hml.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,6 +34,20 @@ namespace Receitas_hml
 			
 
         }
+
+		public static void CarregarReceitas()
+        {
+			int qtdReceitas = Program.ListaDeReceitas.Count;
+			if (qtdReceitas != 0)
+				foreach (Receita receita in Program.ListaDeReceitas)
+				{
+					telaPrincipal.flowLayoutPanelReceitas.Controls.Add(new CardReceita(receita));
+				}
+			else
+			{
+				telaPrincipal.flowLayoutPanelReceitas.Controls.Add(new CardReceita());
+			}
+		}
 
 		public void EditarReceita() //botão "Editar" presente em algum Form deverá chamar esta função
 		{ //Não colocarei como argumento um objeto receita, pois ao clicar no botão "Editar",

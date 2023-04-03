@@ -18,6 +18,9 @@ namespace Receitas_hml
 
         private void telaPrincipal_Load(object sender, EventArgs e)
         {
+
+            Receita.CarregarReceitas();
+            /*
             int qtdReceitas = Program.ListaDeReceitas.Count;
             if (qtdReceitas != 0)
                 foreach (Receita receita in Program.ListaDeReceitas)
@@ -27,7 +30,7 @@ namespace Receitas_hml
             else
             {
                 flowLayoutPanelReceitas.Controls.Add(new CardReceita());
-            }
+            }*/
         }
     }
 }
