@@ -35,14 +35,18 @@ namespace Receitas_hml
 
         }
 
-		public static void CarregarReceitas()
+		public static void CarregarReceitas(List<Receita> ListaDeReceitas)
         {
+			telaPrincipal.flowLayoutPanelReceitas.Controls.Clear();
 			int qtdReceitas = Program.ListaDeReceitas.Count;
+			
 			if (qtdReceitas != 0)
-				foreach (Receita receita in Program.ListaDeReceitas)
+            {
+				foreach (Receita receita in ListaDeReceitas)
 				{
 					telaPrincipal.flowLayoutPanelReceitas.Controls.Add(new CardReceita(receita));
 				}
+			}	
 			else
 			{
 				telaPrincipal.flowLayoutPanelReceitas.Controls.Add(new CardReceita());

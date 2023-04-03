@@ -18,8 +18,8 @@ namespace Receitas_hml
 
         private void telaPrincipal_Load(object sender, EventArgs e)
         {
-
-            Receita.CarregarReceitas();
+            
+            Receita.CarregarReceitas(Program.ListaDeReceitas);
             /*
             int qtdReceitas = Program.ListaDeReceitas.Count;
             if (qtdReceitas != 0)
