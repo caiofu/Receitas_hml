@@ -28,6 +28,12 @@ namespace Receitas_hml
 
 		}
 
+		public static dynamic LerAquivo()
+        {
+			dynamic objJsonCarrega = JsonConvert.DeserializeObject(File.ReadAllText(Arquivo.caminhoArquivo));
+			return objJsonCarrega;
+		}
+
 		public static void RemoveReceita()
 		{
 			//dynamic objJson = JsonConvert.DeserializeObject(File.ReadAllText(caminhoArquivo));
