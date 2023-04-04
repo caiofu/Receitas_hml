@@ -10,49 +10,53 @@ using System.Windows.Forms;
 
 namespace Receitas_hml
 {
-    public partial class detalhesReceita : BaseForm
-    {
-        public detalhesReceita()
-        {
-            InitializeComponent();
+	public partial class detalhesReceita : Form
+	{
+		public detalhesReceita(int id)
+		{
+			InitializeComponent();
+			id = id - 1;//Corrigindo para posição do vetor para facilitar
 
-            Receita receita = new Receita();
-            // Criar a lista de itens que deseja adicionar
-            receita.ingredientes.Add("Ingrediente 0");
-            receita.ingredientes.Add("Ingrediente 1");
-            receita.ingredientes.Add("Ingrediente 2");
-            receita.ingredientes.Add("Ingrediente 3");
-            receita.ingredientes.Add("Ingrediente 4");
-            List<string> ingredientes = new List<string>();
-            ingredientes = receita.ingredientes;
+			//Titulo e informações da receita
+			lbDetalhesTituloReceita.Text = Program.ListaDeReceitas[id].nomeReceita;
+			lbDetalhesDificuldadeNumero.Text = Program.ListaDeReceitas[id].dificuldade;
+			Image fotoReceita = Image.FromFile(Program.ListaDeReceitas[id].imagem);
+			imgReceita.Image = fotoReceita;
 
+			//Ingredientes
+			foreach (string ingrediente in Program.ListaDeReceitas[id].ingredientes)
+			{
+				listViewIngredientes.Items.Add(ingrediente);
+			}
 
-            // Adicionar itens ao ListView
-            foreach (string ingrediente in ingredientes)
-            {
-                listView1.Items.Add(ingrediente);
-            }
+			//Modo de preparo
+			foreach (String modoPreparo in Program.ListaDeReceitas[id].modoPreparo)
+			{
+				listViewModoPreparo.Items.Add(modoPreparo);
+			}
 
-        }
+			
 
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
+		}
 
-        }
+		private void groupBox2_Enter(object sender, EventArgs e)
+		{
 
-        private void label1_Click(object sender, EventArgs e)
-        {
+		}
 
-        }
+		private void label1_Click(object sender, EventArgs e)
+		{
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
+		}
 
-        }
+		private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+		{
 
-        private void grpDetalhesReceitaCorpo_Enter(object sender, EventArgs e)
-        {
+		}
 
-        }
-    }
+		private void grpDetalhesReceitaCorpo_Enter(object sender, EventArgs e)
+		{
+
+		}
+	}
 }
