@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Receitas_hml.Forms
 {
-	public partial class adicionarReceita : BaseForm
+	public partial class adicionarReceita : Form
 	{
 		public adicionarReceita()
 		{
@@ -146,7 +146,7 @@ namespace Receitas_hml.Forms
                 {
 					if (MessageBox.Show("Receita Salva!") == DialogResult.OK)
 					{
-
+						Receita.CarregarReceitas(Program.ListaDeReceitas);
 						this.Close();
 					}
 				}

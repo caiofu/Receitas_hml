@@ -31,7 +31,7 @@ namespace Receitas_hml
 			//CARREGANDO DADOS DO ARQUIVO JSON PARA LISTA CASO TENHA DADOS
 			dynamic objJsonCarrega = JsonConvert.DeserializeObject(File.ReadAllText(Arquivo.caminhoArquivo));
 
-			if (File.Exists(Arquivo.caminhoArquivo) && objJsonCarrega.Count > 0)
+			if (File.Exists(Arquivo.caminhoArquivo) && objJsonCarrega.Count > 0) //TRATAR CASO ARQUIVO JSON ESTEJA EM FORMATO INVALIDO
 			{
 				foreach (var item in objJsonCarrega)
 				{
