@@ -20,7 +20,7 @@ namespace Receitas_hml
 
         private void telaPrincipal_Load(object sender, EventArgs e)
         {
-            
+            cboxFiltros.SelectedIndex = 0;
             CarregarReceitas(Program.ListaDeReceitas);
             /*
             int qtdReceitas = Program.ListaDeReceitas.Count;
@@ -43,11 +43,14 @@ namespace Receitas_hml
             String filtro = cboxFiltros.SelectedItem.ToString()!;
             String entrada = txBoxPesquisaReceita.Text.ToString();
             List<Receita> auxListaReceitas = new List<Receita>();
-            
-            if(filtro == "TITULO")
+            if(filtro == "TODOS")
+            {
+                auxListaReceitas = Program.ListaDeReceitas; 
+            }
+            else if(filtro == "TITULO")
             {
                 auxListaReceitas = Program.ListaDeReceitas
-                    .Where(r => r.nomeReceita.Contains(entrada))
+                    .Where(r => r.nomeReceita.ToLower().Contains(entrada.ToLower()))
                     .Select(r => r).ToList();
             }
             else if(filtro == "INGREDIENTE")
@@ -59,7 +62,7 @@ namespace Receitas_hml
             else if(filtro == "DIFICULDADE")
             {
                 auxListaReceitas = Program.ListaDeReceitas
-                    .Where(r => r.dificuldade == entrada)
+                    .Where(r => r.dificuldade.ToLower().Equals(entrada.ToLower()))
                     .Select(r => r).ToList();   
             }
             /*else if(filtro == "FAVORITOS")

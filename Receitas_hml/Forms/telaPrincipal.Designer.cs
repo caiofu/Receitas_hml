@@ -138,6 +138,7 @@
             this.Controls.Add(this.gpBoxMenu);
             this.Name = "telaPrincipal";
             this.Text = "Receitas";
+            this.Load += new System.EventHandler(this.telaPrincipal_Load);
             this.gpBoxMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
