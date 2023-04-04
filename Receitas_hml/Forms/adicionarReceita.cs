@@ -146,7 +146,7 @@ namespace Receitas_hml.Forms
                 {
 					if (MessageBox.Show("Receita Salva!") == DialogResult.OK)
 					{
-						Receita.CarregarReceitas(Program.ListaDeReceitas);
+						//((telaPrincipal)ParentForm).CarregarReceitas(Program.ListaDeReceitas);
 						this.Close();
 					}
 				}

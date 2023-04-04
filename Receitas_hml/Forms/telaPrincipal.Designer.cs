@@ -107,6 +107,7 @@
             this.btnAdicionarReceita.TabIndex = 0;
             this.btnAdicionarReceita.Text = "Adicionar Receita";
             this.btnAdicionarReceita.UseVisualStyleBackColor = true;
+            this.btnAdicionarReceita.Click += new System.EventHandler(this.btnAdicionarReceita_Click);
             // 
             // gpBoxReceitas
             // 
@@ -154,6 +155,6 @@
         private ComboBox cboxFiltros;
         private TextBox txBoxPesquisaReceita;
         private GroupBox gpBoxReceitas;
-        public static FlowLayoutPanel flowLayoutPanelReceitas;
+        private FlowLayoutPanel flowLayoutPanelReceitas;
     }
 }

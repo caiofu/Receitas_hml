@@ -15,12 +15,13 @@ namespace Receitas_hml
         {
             adicionarReceita addReceita = new adicionarReceita();
             addReceita.ShowDialog();
+            CarregarReceitas(Program.ListaDeReceitas);
         }
 
         private void telaPrincipal_Load(object sender, EventArgs e)
         {
             
-            Receita.CarregarReceitas(Program.ListaDeReceitas);
+            CarregarReceitas(Program.ListaDeReceitas);
             /*
             int qtdReceitas = Program.ListaDeReceitas.Count;
             if (qtdReceitas != 0)
@@ -32,7 +33,7 @@ namespace Receitas_hml
             {
                 flowLayoutPanelReceitas.Controls.Add(new CardReceita());
             }*/
-            }
+            //}
             
         }
 
@@ -68,8 +69,26 @@ namespace Receitas_hml
                     .Select(r => r).ToList();
             }*/
 
-            //CHAMAR CARREGA RECEITAS
+            CarregarReceitas(auxListaReceitas);
 
+        }
+
+        public void CarregarReceitas(List<Receita> ListaDeReceitas)
+        {
+            flowLayoutPanelReceitas.Controls.Clear();
+            int qtdReceitas = Program.ListaDeReceitas.Count;
+
+            if (qtdReceitas != 0)
+            {
+                foreach (Receita receita in ListaDeReceitas)
+                {
+                    flowLayoutPanelReceitas.Controls.Add(new CardReceita(receita));
+                }
+            }
+            else
+            {
+                flowLayoutPanelReceitas.Controls.Add(new CardReceita());
+            }
         }
     }
 }
