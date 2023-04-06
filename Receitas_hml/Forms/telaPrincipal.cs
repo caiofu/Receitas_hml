@@ -34,7 +34,7 @@ namespace Receitas_hml
                 flowLayoutPanelReceitas.Controls.Add(new CardReceita());
             }*/
             //}
-            
+
         }
 
         private void btnPesquisarReceita_Click(object sender, EventArgs e)
@@ -43,30 +43,33 @@ namespace Receitas_hml
             String filtro = cboxFiltros.SelectedItem.ToString()!;
             String entrada = txBoxPesquisaReceita.Text.ToString();
             List<Receita> auxListaReceitas = new List<Receita>();
-            if(filtro == "TODOS")
-            {
-                auxListaReceitas = Program.ListaDeReceitas; 
-            }
-            else if(filtro == "TITULO")
+            if (filtro == "TODOS")
             {
                 auxListaReceitas = Program.ListaDeReceitas
-                    .Where(r => r.nomeReceita.ToLower().Contains(entrada.ToLower()))
+                    .Where(r => removeAcentos(r.nomeReceita).Equals(removeAcentos(entrada)))
                     .Select(r => r).ToList();
             }
-            else if(filtro == "INGREDIENTE")
+            else if (filtro == "TITULO")
             {
+                
                 auxListaReceitas = Program.ListaDeReceitas
-                    .Where(r => r.ingredientes.Any(i => i == entrada))
+                    .Where(r => removeAcentos(r.nomeReceita).Contains(removeAcentos(entrada)))
                     .Select(r => r).ToList();
             }
-            else if(filtro == "DIFICULDADE")
+            else if (filtro == "INGREDIENTE")
             {
                 auxListaReceitas = Program.ListaDeReceitas
-                    .Where(r => r.dificuldade.ToLower().Equals(entrada.ToLower()))
-                    .Select(r => r).ToList();   
+                    .Where(r => r.ingredientes.Any(i => removeAcentos(i.ToLower()) == entrada))
+                    .Select(r => r).ToList();
+            }
+            else if (filtro == "DIFICULDADE")
+            {
+                auxListaReceitas = Program.ListaDeReceitas
+                    .Where(r => removeAcentos(r.dificuldade).Contains(removeAcentos(entrada)))
+                    .Select(r => r).ToList();
             }
             /*else if(filtro == "FAVORITOS")
-            {
+            { Equals(removeAcentos(entrada.ToLower())))
                 auxListaReceitas = Program.ListaDeReceitas
                     .Where(r => r.favorito = true)
                     .Select(r => r).ToList();
@@ -92,6 +95,18 @@ namespace Receitas_hml
             {
                 flowLayoutPanelReceitas.Controls.Add(new CardReceita());
             }
+        }
+    
+        public static String removeAcentos(String texto)
+        {
+            String comAcentos = "äáâàãéêëèíîïìöóôòõüúûùÇç";
+            String semAcentos = "aaaaaeeeeiiiiooooouuuuCc";
+
+            for (int i = 0; i < comAcentos.Length; i++)
+            {
+                texto = texto.Replace(comAcentos[i].ToString(), semAcentos[i].ToString());
+            }
+            return texto.ToLower();
         }
     }
 }
