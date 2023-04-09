@@ -6,7 +6,7 @@ namespace Receitas_hml
 	public static class Program
 	{
         //CRIANDO A LISTA PARA LIDAR COM AS RECEIRAS
-        public static List<Receita> ListaDeReceitas = new List<Receita>();
+       // public static List<Receita> ListaDeReceitas = new List<Receita>();
 		/// <summary>
 		///  The main entry point for the application.
 		/// </summary>
@@ -14,6 +14,7 @@ namespace Receitas_hml
 
 		static void Main()
 		{
+			/*
 
 			//### PREPARANDO ARQUIVOS E DIRETORIOS ##//
 			if (File.Exists(Arquivo.caminhoArquivo) == false)
@@ -57,7 +58,7 @@ namespace Receitas_hml
 					ListaDeReceitas.Add(auxReceita);
 				}
 
-			}
+			}*/
 
 				// To customize application configuration such as set high DPI settings or default font,
 				// see https://aka.ms/applicationconfiguration.

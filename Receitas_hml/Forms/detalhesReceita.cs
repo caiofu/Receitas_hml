@@ -18,24 +18,24 @@ namespace Receitas_hml
 			id = id - 1;//Corrigindo para posição do vetor para facilitar
 
 			//Titulo e informações da receita
-			lbDetalhesTituloReceita.Text = Program.ListaDeReceitas[id].nomeReceita;
-			lbDetalhesDificuldadeNumero.Text = Program.ListaDeReceitas[id].dificuldade;
-			Image fotoReceita = Image.FromFile(Program.ListaDeReceitas[id].imagem);
+			lbDetalhesTituloReceita.Text = Arquivo.ListaDeReceitas[id].nomeReceita;
+			lbDetalhesDificuldadeNumero.Text = Arquivo.ListaDeReceitas[id].dificuldade;
+			Image fotoReceita = Image.FromFile(Arquivo.ListaDeReceitas[id].imagem);
 			imgReceita.Image = fotoReceita;
 
 			//Ingredientes
-			foreach (string ingrediente in Program.ListaDeReceitas[id].ingredientes)
+			foreach (string ingrediente in Arquivo.ListaDeReceitas[id].ingredientes)
 			{
 				listViewIngredientes.Items.Add(ingrediente);
 			}
 
 			//Modo de preparo
-			foreach (String modoPreparo in Program.ListaDeReceitas[id].modoPreparo)
+			foreach (String modoPreparo in Arquivo.ListaDeReceitas[id].modoPreparo)
 			{
 				listViewModoPreparo.Items.Add(modoPreparo);
 			}
 
-			
+
 
 		}
 

@@ -29,7 +29,6 @@
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(detalhesReceita));
-			ListViewItem listViewItem2 = new ListViewItem("");
 			grpDetalhesReceitaCabecalho = new GroupBox();
 			lbDetalhesDificuldadeNumero = new Label();
 			lbDetalhesDificuldade = new Label();
@@ -152,7 +151,6 @@
 			listViewModoPreparo.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
 			listViewModoPreparo.HeaderStyle = ColumnHeaderStyle.Nonclickable;
 			listViewModoPreparo.HideSelection = true;
-			listViewModoPreparo.Items.AddRange(new ListViewItem[] { listViewItem2 });
 			listViewModoPreparo.Location = new Point(91, 335);
 			listViewModoPreparo.MultiSelect = false;
 			listViewModoPreparo.Name = "listViewModoPreparo";

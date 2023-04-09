@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Receitas_hml.Forms
 {
 	public partial class adicionarReceita : Form
@@ -97,7 +98,7 @@ namespace Receitas_hml.Forms
 			if (ValidaCampos() == true)
 			{
 				//Salvando a imagem
-				int indiceReceita = Program.ListaDeReceitas.Count() + 1;
+				int indiceReceita = Arquivo.ListaDeReceitas.Count() + 1;
 				String caminho = "imgReceitas/receita_id_" + indiceReceita + ".jpg";
 				Image image = Image.FromFile(picBoxFotoReceita.ImageLocation); //Pega aonde esta a imagem
 				image.Save(caminho);
@@ -135,14 +136,14 @@ namespace Receitas_hml.Forms
 				}
 
 				Receita novaReceita = new Receita(indiceReceita, txtBoxNomeReceita.Text, caminho, ingredientes, false, dificuldade, modoDePreparo);
-				Program.ListaDeReceitas.Add(novaReceita);
+				Arquivo.ListaDeReceitas.Add(novaReceita);
 
 
-				Arquivo.CriaArquivo(Program.ListaDeReceitas);
+				Arquivo.CriaArquivo(Arquivo.ListaDeReceitas);
 
 				//VERIFICA SE O ARQUIVO FOI SALVO NO JSON.
 				dynamic objJson = Arquivo.LerAquivo();
-				if (Program.ListaDeReceitas.Count == objJson.Count)
+				if (Arquivo.ListaDeReceitas.Count == objJson.Count)
                 {
 					if (MessageBox.Show("Receita Salva!") == DialogResult.OK)
 					{

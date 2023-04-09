@@ -15,13 +15,14 @@ namespace Receitas_hml
         {
             adicionarReceita addReceita = new adicionarReceita();
             addReceita.ShowDialog();
-            CarregarReceitas(Program.ListaDeReceitas);
+            CarregarReceitas(Arquivo.ListaDeReceitas);
         }
 
         private void telaPrincipal_Load(object sender, EventArgs e)
         {
             cboxFiltros.SelectedIndex = 0;
-            CarregarReceitas(Program.ListaDeReceitas);
+            Arquivo.PreparaArquivo();
+            CarregarReceitas(Arquivo.ListaDeReceitas);
             /*
             int qtdReceitas = Program.ListaDeReceitas.Count;
             if (qtdReceitas != 0)
@@ -45,26 +46,26 @@ namespace Receitas_hml
             List<Receita> auxListaReceitas = new List<Receita>();
             if (filtro == "TODOS")
             {
-                auxListaReceitas = Program.ListaDeReceitas
+                auxListaReceitas = Arquivo.ListaDeReceitas
                     .Where(r => removeAcentos(r.nomeReceita).Equals(removeAcentos(entrada)))
                     .Select(r => r).ToList();
             }
             else if (filtro == "TITULO")
             {
                 
-                auxListaReceitas = Program.ListaDeReceitas
+                auxListaReceitas = Arquivo.ListaDeReceitas
                     .Where(r => removeAcentos(r.nomeReceita).Contains(removeAcentos(entrada)))
                     .Select(r => r).ToList();
             }
             else if (filtro == "INGREDIENTE")
             {
-                auxListaReceitas = Program.ListaDeReceitas
+                auxListaReceitas = Arquivo.ListaDeReceitas
                     .Where(r => r.ingredientes.Any(i => removeAcentos(i.ToLower()) == entrada))
                     .Select(r => r).ToList();
             }
             else if (filtro == "DIFICULDADE")
             {
-                auxListaReceitas = Program.ListaDeReceitas
+                auxListaReceitas = Arquivo.ListaDeReceitas
                     .Where(r => removeAcentos(r.dificuldade).Contains(removeAcentos(entrada)))
                     .Select(r => r).ToList();
             }
@@ -82,7 +83,7 @@ namespace Receitas_hml
         public void CarregarReceitas(List<Receita> ListaDeReceitas)
         {
             flowLayoutPanelReceitas.Controls.Clear();
-            int qtdReceitas = Program.ListaDeReceitas.Count;
+            int qtdReceitas = Arquivo.ListaDeReceitas.Count;
 
             if (qtdReceitas != 0)
             {
