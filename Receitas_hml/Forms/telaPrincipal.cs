@@ -52,7 +52,7 @@ namespace Receitas_hml
             }
             else if (filtro == "TITULO")
             {
-                
+
                 auxListaReceitas = Arquivo.ListaDeReceitas
                     .Where(r => removeAcentos(r.nomeReceita).Contains(removeAcentos(entrada)))
                     .Select(r => r).ToList();
@@ -97,7 +97,7 @@ namespace Receitas_hml
                 flowLayoutPanelReceitas.Controls.Add(new CardReceita());
             }
         }
-    
+
         public static String removeAcentos(String texto)
         {
             String comAcentos = "הבגאדיךכטםמןלצףפעץüתûשַח";
