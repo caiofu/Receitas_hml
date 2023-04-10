@@ -11,7 +11,7 @@ namespace Receitas_hml
 	{
 		public int id { get; set; }
 		public String nomeReceita { get; set; }
-		
+		public String autor { get; set; }
 		public String imagem { get; set; } 
 		public List<String> ingredientes = new List<String>();
 		public bool favorito = false; //padrão
@@ -21,27 +21,21 @@ namespace Receitas_hml
 
 		//CONSTRUTOR
 		public Receita() { }
-		public Receita(int id,String nomeReceita, String imagem, List<String> ingredientes, bool favorito, string dificuldade,List<String> modoPreparo)
+		public Receita(int id, String nomeReceita, String imagem, List<String> ingredientes, bool favorito, string dificuldade, List<String> modoPreparo, string autor)
         {
-			this.id = id;
-			this.nomeReceita = nomeReceita;
-			this.imagem = imagem;
-			this.ingredientes = ingredientes;
-			this.favorito = favorito;	
-			this.dificuldade = dificuldade;
-			this.modoPreparo = modoPreparo;
-
-			
-
+            this.id = id;
+            this.nomeReceita = nomeReceita;
+            this.imagem = imagem;
+            this.ingredientes = ingredientes;
+            this.favorito = favorito;
+            this.dificuldade = dificuldade;
+            this.modoPreparo = modoPreparo;
+            this.autor = autor;
         }
 
-		
 
-		public void EditarReceita() //botão "Editar" presente em algum Form deverá chamar esta função
-		{ //Não colocarei como argumento um objeto receita, pois ao clicar no botão "Editar",
-		  //a chamada deve procurar a lista de objetos receitas, selecionar a receita e chamar a função, logo poderemos editar os campos com "this.nome" por exemplo
-		  
-			//Chama formulário de edição dos campos do objeto receita, os valores dos txtBox atualizarão os atributos da receita.
+
+        public void EditarReceita() { 
 		}
 
 		public  void ExcluirReceita()
