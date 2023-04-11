@@ -46,9 +46,19 @@ namespace Receitas_hml
             List<Receita> auxListaReceitas = new List<Receita>();
             if (filtro == "TODOS")
             {
-                auxListaReceitas = Arquivo.ListaDeReceitas
-                    .Where(r => removeAcentos(r.nomeReceita).Equals(removeAcentos(entrada)))
-                    .Select(r => r).ToList();
+                if(entrada == "")
+                {
+                    auxListaReceitas = Arquivo.ListaDeReceitas
+                        .Select(r => r).ToList();
+                }
+                else {
+                    auxListaReceitas = Arquivo.ListaDeReceitas
+                       .Where(r => removeAcentos(r.nomeReceita).Contains(removeAcentos(entrada)) ||
+                           r.ingredientes.Any(i => removeAcentos(i.ToLower()) == entrada) ||
+                           removeAcentos(r.dificuldade).Contains(removeAcentos(entrada)))
+                        .Select(r => r).ToList();
+
+                }
             }
             else if (filtro == "TITULO")
             {
@@ -108,6 +118,11 @@ namespace Receitas_hml
                 texto = texto.Replace(comAcentos[i].ToString(), semAcentos[i].ToString());
             }
             return texto.ToLower();
+        }
+
+        private void cboxFiltros_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

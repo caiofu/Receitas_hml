@@ -77,6 +77,7 @@
             cboxFiltros.Name = "cboxFiltros";
             cboxFiltros.Size = new Size(121, 28);
             cboxFiltros.TabIndex = 3;
+            cboxFiltros.SelectedIndexChanged += cboxFiltros_SelectedIndexChanged;
             // 
             // txBoxPesquisaReceita
             // 
