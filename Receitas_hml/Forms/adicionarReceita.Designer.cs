@@ -54,6 +54,9 @@
             this.btnAdicionaFotoReceita = new System.Windows.Forms.Button();
             this.picBoxFotoReceita = new System.Windows.Forms.PictureBox();
             this.errorProviderValidaReceita = new System.Windows.Forms.ErrorProvider(this.components);
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtBoxAutor = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -63,6 +66,7 @@
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxFotoReceita)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderValidaReceita)).BeginInit();
+            this.groupBox6.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -111,12 +115,14 @@
             // 
             // lstBoxIngredientes
             // 
+            this.lstBoxIngredientes.AllowDrop = true;
             this.lstBoxIngredientes.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lstBoxIngredientes.FormattingEnabled = true;
             this.lstBoxIngredientes.ItemHeight = 23;
             this.lstBoxIngredientes.Location = new System.Drawing.Point(157, 66);
             this.lstBoxIngredientes.Name = "lstBoxIngredientes";
             this.lstBoxIngredientes.Size = new System.Drawing.Size(293, 73);
+            this.lstBoxIngredientes.Sorted = true;
             this.lstBoxIngredientes.TabIndex = 5;
             // 
             // btnRemoverIngrediente
@@ -136,7 +142,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtBoxIngredientes);
             this.groupBox1.Controls.Add(this.btnAdicionarIngredientes);
-            this.groupBox1.Location = new System.Drawing.Point(3, 203);
+            this.groupBox1.Location = new System.Drawing.Point(3, 250);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(573, 184);
             this.groupBox1.TabIndex = 7;
@@ -149,7 +155,7 @@
             this.groupBox2.Controls.Add(this.btnAdicionarPreparo);
             this.groupBox2.Controls.Add(this.txtBoxPreparo);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(3, 393);
+            this.groupBox2.Location = new System.Drawing.Point(3, 433);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(573, 175);
             this.groupBox2.TabIndex = 8;
@@ -173,6 +179,7 @@
             this.lstBoxPreparo.Location = new System.Drawing.Point(157, 61);
             this.lstBoxPreparo.Name = "lstBoxPreparo";
             this.lstBoxPreparo.Size = new System.Drawing.Size(293, 73);
+            this.lstBoxPreparo.Sorted = true;
             this.lstBoxPreparo.TabIndex = 7;
             // 
             // btnAdicionarPreparo
@@ -208,7 +215,7 @@
             this.groupBox3.Controls.Add(this.txtBoxNomeReceita);
             this.groupBox3.Location = new System.Drawing.Point(3, 138);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(573, 59);
+            this.groupBox3.Size = new System.Drawing.Size(573, 50);
             this.groupBox3.TabIndex = 9;
             this.groupBox3.TabStop = false;
             // 
@@ -217,7 +224,7 @@
             this.btnAdicionarReceita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnAdicionarReceita.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAdicionarReceita.ForeColor = System.Drawing.Color.White;
-            this.btnAdicionarReceita.Location = new System.Drawing.Point(397, 574);
+            this.btnAdicionarReceita.Location = new System.Drawing.Point(397, 614);
             this.btnAdicionarReceita.Name = "btnAdicionarReceita";
             this.btnAdicionarReceita.Size = new System.Drawing.Size(179, 50);
             this.btnAdicionarReceita.TabIndex = 10;
@@ -227,6 +234,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.groupBox6);
             this.panel1.Controls.Add(this.groupBox5);
             this.panel1.Controls.Add(this.groupBox4);
             this.panel1.Controls.Add(this.groupBox3);
@@ -235,7 +243,7 @@
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(593, 629);
+            this.panel1.Size = new System.Drawing.Size(593, 667);
             this.panel1.TabIndex = 11;
             // 
             // groupBox5
@@ -323,14 +331,42 @@
             // 
             // errorProviderValidaReceita
             // 
+            this.errorProviderValidaReceita.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProviderValidaReceita.ContainerControl = this;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.label4);
+            this.groupBox6.Controls.Add(this.txtBoxAutor);
+            this.groupBox6.Location = new System.Drawing.Point(5, 188);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(573, 59);
+            this.groupBox6.TabIndex = 10;
+            this.groupBox6.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(80, 25);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(60, 20);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "AUTOR";
+            // 
+            // txtBoxAutor
+            // 
+            this.txtBoxAutor.Location = new System.Drawing.Point(157, 22);
+            this.txtBoxAutor.Name = "txtBoxAutor";
+            this.txtBoxAutor.Size = new System.Drawing.Size(386, 23);
+            this.txtBoxAutor.TabIndex = 1;
             // 
             // adicionarReceita
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(616, 653);
+            this.ClientSize = new System.Drawing.Size(616, 691);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -349,6 +385,8 @@
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBoxFotoReceita)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderValidaReceita)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.ResumeLayout(false);
 
 		}
@@ -380,5 +418,8 @@
 		private TrackBar tckBarDificuldade;
 		private Label lbDificuldade;
 		private Label lbDificuldadeMensagem;
-	}
+        private GroupBox groupBox6;
+        private Label label4;
+        private TextBox txtBoxAutor;
+    }
 }

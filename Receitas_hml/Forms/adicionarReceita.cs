@@ -40,7 +40,7 @@ namespace Receitas_hml.Forms
 		private void btnRemoverIngrediente_Click(object sender, EventArgs e)
 		{
 			//Remove o item selecionado do lixtbox
-			if(lstBoxIngredientes.Items.Count > 0)
+			if(lstBoxIngredientes.Items.Count > 0 && lstBoxIngredientes.SelectedIndex > -1)
 			{
                 lstBoxIngredientes.Items.RemoveAt(lstBoxIngredientes.SelectedIndex);
             }
@@ -68,7 +68,7 @@ namespace Receitas_hml.Forms
 		private void btnRemoverPreparo_Click(object sender, EventArgs e)
 		{
 			//Remove o item selecionado do lixtbox
-			if (lstBoxPreparo.Items.Count > 0)
+			if (lstBoxPreparo.Items.Count > 0 && lstBoxPreparo.SelectedIndex > -1)
 			{
 				lstBoxPreparo.Items.RemoveAt(lstBoxPreparo.SelectedIndex);
 			}
@@ -135,7 +135,7 @@ namespace Receitas_hml.Forms
 						break;
 				}
 
-				Receita novaReceita = new Receita(indiceReceita, txtBoxNomeReceita.Text, caminho, ingredientes, false, dificuldade, modoDePreparo);
+				Receita novaReceita = new Receita(indiceReceita, txtBoxNomeReceita.Text, caminho, ingredientes, false, dificuldade, modoDePreparo, txtBoxAutor.Text);
 				Arquivo.ListaDeReceitas.Add(novaReceita);
 
 
@@ -197,6 +197,13 @@ namespace Receitas_hml.Forms
 				retorno = false;
 			}
 
+			if(txtBoxAutor.Text.Trim() == "")
+            {
+				errorProviderValidaReceita.SetIconPadding(txtBoxAutor, 4);
+				errorProviderValidaReceita.SetError(txtBoxAutor, "Digite o nome do autor");
+				retorno = false;
+			}
+
 			return retorno;
 		}
 
@@ -224,6 +231,11 @@ namespace Receitas_hml.Forms
 
 		}
 
-       
+        private void button1_Click(object sender, EventArgs e)
+        {
+			
+        }
+
+     
     }
 }

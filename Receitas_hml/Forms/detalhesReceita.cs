@@ -19,6 +19,7 @@ namespace Receitas_hml
 
 			//Titulo e informações da receita
 			lbDetalhesTituloReceita.Text = Arquivo.ListaDeReceitas[id].nomeReceita;
+			lbNomeAutor.Text = Arquivo.ListaDeReceitas[id].autor;
 			lbDetalhesDificuldadeNumero.Text = Arquivo.ListaDeReceitas[id].dificuldade;
 			Image fotoReceita = Image.FromFile(Arquivo.ListaDeReceitas[id].imagem);
 			imgReceita.Image = fotoReceita;
