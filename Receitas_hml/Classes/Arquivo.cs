@@ -84,16 +84,24 @@ namespace Receitas_hml
 			return objJsonCarrega;
 		}
 
-		public static void RemoveReceita()
+		public static void RemoveReceita(int idReceita)
 		{
-			//dynamic objJson = JsonConvert.DeserializeObject(File.ReadAllText(caminhoArquivo));
-			//Remove o contato
-			// objJson.RemoveAt(idContato);
+			dynamic objJson = JsonConvert.DeserializeObject(File.ReadAllText(caminhoArquivo));
+
+			foreach (var item in objJson)
+			{
+				if( item.id == idReceita)
+                {
+					//Remove o receita
+					objJson.RemoveAt(idReceita);
+				}
+			}
+			
 
 			
 
 			//Remonta o arquivo json
-			//File.WriteAllText(caminhoArquivo, JsonConvert.SerializeObject(objJson, Formatting.Indented));
+			File.WriteAllText(caminhoArquivo, JsonConvert.SerializeObject(objJson, Formatting.Indented));
 		}
 	}
 }

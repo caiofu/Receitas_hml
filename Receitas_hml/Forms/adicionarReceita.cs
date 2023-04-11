@@ -97,8 +97,17 @@ namespace Receitas_hml.Forms
 		{
 			if (ValidaCampos() == true)
 			{
+				//Salvando o indice
+				int indiceReceita;
+				if (Arquivo.ListaDeReceitas.Count() == 0)
+                {
+					indiceReceita = 0;
+                }
+				else
+                {
+					indiceReceita = Arquivo.ListaDeReceitas.Count() + 1;
+				}
 				//Salvando a imagem
-				int indiceReceita = Arquivo.ListaDeReceitas.Count() + 1;
 				String caminho = "imgReceitas/receita_id_" + indiceReceita + ".jpg";
 				Image image = Image.FromFile(picBoxFotoReceita.ImageLocation); //Pega aonde esta a imagem
 				image.Save(caminho);

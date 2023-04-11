@@ -12,11 +12,13 @@ namespace Receitas_hml
 {
 	public partial class detalhesReceita : Form
 	{
+		private int idAtual;
 		public detalhesReceita(int id)
 		{
 			InitializeComponent();
-			id = id - 1;//Corrigindo para posição do vetor para facilitar
-
+			//id = id - 1;//Corrigindo para posição do vetor para facilitar
+			idAtual = id;
+			
 			//Titulo e informações da receita
 			lbDetalhesTituloReceita.Text = Arquivo.ListaDeReceitas[id].nomeReceita;
 			lbNomeAutor.Text = Arquivo.ListaDeReceitas[id].autor;
@@ -59,5 +61,16 @@ namespace Receitas_hml
 		{
 
 		}
-	}
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+			if (MessageBox.Show("Deseja realmente excluir essa receita?", "Verificação", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+			{
+				Arquivo.RemoveReceita(this.idAtual);
+				
+			}
+			
+			
+        }
+    }
 }
