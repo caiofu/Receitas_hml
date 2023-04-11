@@ -42,9 +42,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbDetalhesIngredientes = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.grpDetalhesReceitaCabecalho.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imgReceita)).BeginInit();
             this.grpDetalhesReceitaCorpo.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpDetalhesReceitaCabecalho
@@ -53,6 +57,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.grpDetalhesReceitaCabecalho.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.grpDetalhesReceitaCabecalho.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.grpDetalhesReceitaCabecalho.Controls.Add(this.panel1);
             this.grpDetalhesReceitaCabecalho.Controls.Add(this.label2);
             this.grpDetalhesReceitaCabecalho.Controls.Add(this.lbNomeAutor);
             this.grpDetalhesReceitaCabecalho.Controls.Add(this.lbAutor);
@@ -246,6 +251,40 @@
             this.label2.Text = "Receita:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnEditar);
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Location = new System.Drawing.Point(8, 496);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(225, 99);
+            this.panel1.TabIndex = 7;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.DarkRed;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button2.Location = new System.Drawing.Point(21, 53);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(180, 33);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "EXLUIR";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnEditar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnEditar.Location = new System.Drawing.Point(21, 14);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(180, 33);
+            this.btnEditar.TabIndex = 2;
+            this.btnEditar.Text = "EDITAR";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            // 
             // detalhesReceita
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -262,6 +301,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgReceita)).EndInit();
             this.grpDetalhesReceitaCorpo.ResumeLayout(false);
             this.grpDetalhesReceitaCorpo.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
 		}
@@ -281,5 +321,8 @@
         private Label lbNomeAutor;
         private Label lbAutor;
         private Label label2;
+        private Panel panel1;
+        private Button btnEditar;
+        private Button button2;
     }
 }
